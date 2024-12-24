@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { Menu, X, ChevronDown } from "lucide-react";
+import { GetStartedForm } from "./GetStartedForm";
 
 export const Navigation = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -55,9 +56,7 @@ export const Navigation = () => {
                 Resources <ChevronDown className="ml-1 w-4 h-4" />
               </a>
             </div>
-            <a href="#" className="bg-black text-white px-6 py-2 rounded-full hover:bg-gray-800 transition-colors">
-              Get Started
-            </a>
+            <GetStartedForm />
           </div>
         </div>
       </nav>
