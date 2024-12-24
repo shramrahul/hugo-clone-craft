@@ -121,7 +121,11 @@ export const GetStartedForm = () => {
             <Textarea placeholder="I'm looking to..." className="min-h-[100px]" />
           </div>
           
-          <Button type="submit" className="w-full bg-black text-white hover:bg-gray-800">
+          <Button 
+            type="submit" 
+            className="w-full bg-black text-white hover:bg-gray-800"
+            onClick={() => setOpen(false)}
+          >
             Get Started Free
           </Button>
         </form>
