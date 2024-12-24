@@ -8,19 +8,55 @@ export const Hero = () => {
   }, []);
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-black text-white relative overflow-hidden">
-      <div className="absolute inset-0 bg-gradient-to-b from-black/20 to-black/60" />
-      <div className="container mx-auto px-4 relative z-10">
-        <div className={`space-y-6 max-w-4xl mx-auto text-center transform transition-all duration-1000 ${isVisible ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"}`}>
-          <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold leading-tight">
-            We Create Digital Experiences That Matter
+    <div className="min-h-screen pt-24 bg-white">
+      <div className="container mx-auto px-4 flex flex-col lg:flex-row items-center">
+        <div className="lg:w-1/2 relative">
+          <div className="grid grid-cols-4 gap-4">
+            {Array(16).fill(null).map((_, i) => (
+              <div 
+                key={i} 
+                className={`w-20 h-20 rounded-full ${
+                  i % 3 === 0 ? 'border-4 border-[#FFB800]' : 'border-2 border-gray-100'
+                }`}
+              />
+            ))}
+          </div>
+          {/* Add profile images */}
+          <div className="absolute top-1/4 right-1/4">
+            <img src="/placeholder.svg" alt="Team member" className="w-12 h-12 rounded-full border-2 border-white" />
+          </div>
+          <div className="absolute bottom-1/3 left-1/3">
+            <img src="/placeholder.svg" alt="Team member" className="w-12 h-12 rounded-full border-2 border-white" />
+          </div>
+        </div>
+        <div className="lg:w-1/2 space-y-6 mt-12 lg:mt-0">
+          <div className="inline-block px-4 py-2 bg-gray-100 rounded-full text-sm mb-4">
+            Outsourcing+
+          </div>
+          <h1 className="text-5xl md:text-7xl font-bold leading-tight">
+            Built to make you better.
           </h1>
-          <p className="text-xl md:text-2xl text-gray-300">
-            A creative agency focused on brand strategy, design, and development
+          <p className="text-xl text-gray-600 max-w-xl">
+            We're not traditional outsourcers. We're built to be your partners in progress, your catalysts for growth, and the drivers of your performance.
           </p>
-          <button className="bg-white text-black px-8 py-4 rounded-full text-lg font-medium hover:bg-gray-100 transition-colors">
-            View Our Work
+          <button className="bg-black text-white px-8 py-4 rounded-full text-lg font-medium hover:bg-gray-800 transition-colors">
+            Build your Dream Team
           </button>
+          
+          <div className="mt-12 bg-[#E5F9FB] p-6 rounded-xl">
+            <div className="flex items-start space-x-4">
+              <img src="/placeholder.svg" alt="Case study" className="w-16 h-16 rounded-lg" />
+              <div>
+                <h3 className="font-bold mb-2">How Hugo Helped A Leading Innovator Confront Inclusion Gaps</h3>
+                <p className="text-gray-600">
+                  Learn how Hugo, by collecting 600,000 tailored photo IDs in just three months, significantly enhanced AI inclusivity through a collaboration with a leading tech innovator, improving visual recognition technology.
+                </p>
+                <div className="mt-4 h-1 bg-gray-200 rounded">
+                  <div className="w-3/4 h-full bg-black rounded"></div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
