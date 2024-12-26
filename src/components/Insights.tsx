@@ -6,7 +6,7 @@ const insights = [
     title: "Preparing your organization for generative AI",
     description: "Interest in AI is at an all-time high, but there is more to mastering this technology than simply deploying the latest tools.",
     image: "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5",
-    link: "#"
+    link: "/generative-ai"
   },
   {
     title: "Avega survey: Quality and security dominate data and analytics concerns",
