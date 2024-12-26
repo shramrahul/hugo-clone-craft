@@ -9,7 +9,7 @@ export const Hero = () => {
   }, []);
 
   return (
-    <div className="min-h-screen pt-24 bg-white">
+    <div className="py-24 bg-white">
       <div className="container mx-auto px-4 flex flex-col lg:flex-row items-center">
         <div className="lg:w-1/2 relative">
           <div className="grid grid-cols-4 gap-4">
