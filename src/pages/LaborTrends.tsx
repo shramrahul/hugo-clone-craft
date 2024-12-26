@@ -15,35 +15,35 @@ const LaborTrends = () => {
         </Link>
 
         <div className="max-w-4xl mx-auto">
-          <h1 className="text-5xl font-bold mb-4">Labor and Industry Trends</h1>
-          <p className="text-gray-600 mb-12">NOVEMBER 2024</p>
+          <h1 className="text-4xl font-bold mb-4 text-gray-900">Labor and Industry Trends</h1>
+          <p className="text-sm text-gray-600 mb-12">NOVEMBER 2024</p>
 
-          <h2 className="text-3xl font-bold mb-6">Right down the middle</h2>
-          <p className="text-gray-700 mb-8 leading-relaxed">
+          <h2 className="text-3xl font-bold mb-6 text-gray-900">Right down the middle</h2>
+          <p className="text-base text-gray-700 mb-8 leading-relaxed">
             The November BLS jobs report underscores a steady economic trajectory, even as October's data faced temporary disruptions from hurricanes and strikes. Throughout 2024, the economy has been carefully easing into a "soft landing," reflecting the Federal Reserve's deliberate approach to cooling growth. Despite these adjustments, the labor market's strength remains evident, with unemployment rates holding near historic lows—a clear sign of resilience amid change.
           </p>
 
           <div className="bg-gray-100 rounded-lg p-8 mb-12">
-            <h3 className="text-2xl font-bold mb-8 text-center">CURRENT LABOR INDICATORS</h3>
+            <h3 className="text-2xl font-bold mb-8 text-center text-gray-900">CURRENT LABOR INDICATORS</h3>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
               <div>
-                <div className="text-4xl font-bold mb-2">4.2%</div>
-                <div className="text-gray-600">Total Unemployment</div>
+                <div className="text-3xl font-bold mb-2 text-gray-900">4.2%</div>
+                <div className="text-sm text-gray-600">Total Unemployment</div>
               </div>
               <div>
-                <div className="text-4xl font-bold mb-2">227,000</div>
-                <div className="text-gray-600">Total Job Gains</div>
+                <div className="text-3xl font-bold mb-2 text-gray-900">227,000</div>
+                <div className="text-sm text-gray-600">Total Job Gains</div>
               </div>
               <div>
-                <div className="text-4xl font-bold mb-2">4.0%</div>
-                <div className="text-gray-600">Wage Growth % Change (YoY)</div>
+                <div className="text-3xl font-bold mb-2 text-gray-900">4.0%</div>
+                <div className="text-sm text-gray-600">Wage Growth % Change (YoY)</div>
               </div>
             </div>
-            <div className="text-right text-sm text-gray-500 mt-4">Source: U.S. Bureau of Labor Statistics</div>
+            <div className="text-right text-xs text-gray-500 mt-4">Source: U.S. Bureau of Labor Statistics</div>
           </div>
 
-          <h2 className="text-3xl font-bold mb-6">What does this mean?</h2>
-          <div className="space-y-6 text-gray-700 leading-relaxed">
+          <h2 className="text-3xl font-bold mb-6 text-gray-900">What does this mean?</h2>
+          <div className="space-y-6 text-base text-gray-700 leading-relaxed">
             <p>
               As the economic landscape stabilizes, businesses are expected to move beyond the prolonged uncertainty that has delayed critical technology initiatives. According to Avega's COO, the hesitation to invest in transformative projects has created a significant buildup of essential technology needs. This backlog, the COO predicts, will become an urgent focus for clients looking to gain a competitive edge in 2025.
             </p>
