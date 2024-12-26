@@ -20,10 +20,13 @@ export const Navigation = () => {
   }, [prevScrollPos]);
 
   const scrollToSection = (sectionId: string) => {
+    console.log('Scrolling to section:', sectionId);
     const section = document.getElementById(sectionId);
     if (section) {
       section.scrollIntoView({ behavior: 'smooth' });
       setIsMenuOpen(false);
+    } else {
+      console.warn(`Section with id "${sectionId}" not found`);
     }
   };
 
