@@ -1,47 +1,50 @@
-const projects = [
+const sectors = [
   {
-    title: "Project One",
-    category: "Brand Strategy",
-    image: "https://source.unsplash.com/random/800x600?brand",
+    title: "Software Development",
+    description: "Custom software solutions and enterprise applications",
+    image: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?auto=format&fit=crop&q=80",
   },
   {
-    title: "Project Two",
-    category: "Digital Design",
-    image: "https://source.unsplash.com/random/800x600?design",
+    title: "Cloud Solutions",
+    description: "Cloud migration and infrastructure optimization",
+    image: "https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&q=80",
   },
   {
-    title: "Project Three",
-    category: "Development",
-    image: "https://source.unsplash.com/random/800x600?development",
+    title: "Digital Transformation",
+    description: "Business process automation and modernization",
+    image: "https://images.unsplash.com/photo-1605810230434-7631ac76ec81?auto=format&fit=crop&q=80",
   },
   {
-    title: "Project Four",
-    category: "Marketing",
-    image: "https://source.unsplash.com/random/800x600?marketing",
+    title: "Cybersecurity",
+    description: "Advanced security solutions and compliance",
+    image: "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?auto=format&fit=crop&q=80",
   },
 ];
 
 export const WorkShowcase = () => {
   return (
-    <section id="work" className="py-20 bg-white">
+    <section id="sectors" className="py-20 bg-white">
       <div className="container mx-auto px-4">
-        <h2 className="text-4xl font-bold mb-12 text-center">Selected Work</h2>
+        <h2 className="text-4xl font-bold mb-4 text-center">Our Expertise</h2>
+        <p className="text-gray-600 text-center mb-12 max-w-2xl mx-auto">
+          We deliver cutting-edge IT consulting services across various sectors, helping businesses transform and thrive in the digital age.
+        </p>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          {projects.map((project, index) => (
+          {sectors.map((sector, index) => (
             <div
               key={index}
-              className="group relative overflow-hidden cursor-pointer animate-fade-in"
+              className="group relative overflow-hidden rounded-lg shadow-lg animate-fade-in"
               style={{ animationDelay: `${index * 0.2}s` }}
             >
               <img
-                src={project.image}
-                alt={project.title}
-                className="w-full h-[400px] object-cover transition-transform duration-500 group-hover:scale-105"
+                src={sector.image}
+                alt={sector.title}
+                className="w-full h-[300px] object-cover transition-transform duration-500 group-hover:scale-105"
               />
-              <div className="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                <div className="text-white text-center">
-                  <h3 className="text-2xl font-bold mb-2">{project.title}</h3>
-                  <p className="text-gray-300">{project.category}</p>
+              <div className="absolute inset-0 bg-black/70 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                <div className="text-white text-center p-6">
+                  <h3 className="text-2xl font-bold mb-2">{sector.title}</h3>
+                  <p className="text-gray-200">{sector.description}</p>
                 </div>
               </div>
             </div>
