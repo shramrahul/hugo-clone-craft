@@ -7,6 +7,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Index from "./pages/Index";
 import LaborTrends from "./pages/LaborTrends";
 import GenerativeAI from "./pages/GenerativeAI";
+import Careers from "./pages/Careers";
 
 const queryClient = new QueryClient();
 
@@ -22,6 +23,7 @@ const App = () => {
               <Route path="/" element={<Index />} />
               <Route path="/labor-trends" element={<LaborTrends />} />
               <Route path="/generative-ai" element={<GenerativeAI />} />
+              <Route path="/careers" element={<Careers />} />
             </Routes>
           </TooltipProvider>
         </BrowserRouter>

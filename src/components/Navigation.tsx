@@ -1,12 +1,14 @@
 import { useState, useEffect } from "react";
 import { Menu, X, ChevronDown, User, Server, BarChart } from "lucide-react";
 import { GetStartedForm } from "./GetStartedForm";
+import { useNavigate } from "react-router-dom";
 
 export const Navigation = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [prevScrollPos, setPrevScrollPos] = useState(0);
   const [visible, setVisible] = useState(true);
+  const navigate = useNavigate();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -33,7 +35,7 @@ export const Navigation = () => {
   return (
     <>
       <div className="bg-[#FEF7CD] text-sm py-2 text-center">
-        Avega Solutions is hiring! Explore our positions and <a href="#" className="underline">apply today</a>.
+        Avega Solutions is hiring! Explore our positions and <a href="/careers" className="underline">apply today</a>.
       </div>
       <nav 
         className={`fixed w-full z-50 transition-all duration-300 ${
@@ -53,7 +55,15 @@ export const Navigation = () => {
           </button>
 
           <div className={`lg:flex items-center space-x-8 ${isMenuOpen ? "absolute top-full left-0 right-0 bg-white p-4 shadow-lg" : "hidden"}`}>
-            <a href="#" className="flex items-center hover:opacity-70 transition-opacity">
+            <a 
+              href="/careers" 
+              className="flex items-center hover:opacity-70 transition-opacity"
+              onClick={(e) => {
+                e.preventDefault();
+                navigate('/careers');
+                setIsMenuOpen(false);
+              }}
+            >
               <User className="w-4 h-4 mr-1" /> Careers
             </a>
             <button 
