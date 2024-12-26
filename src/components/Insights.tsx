@@ -1,4 +1,5 @@
 import { ArrowRight } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const insights = [
   {
@@ -17,7 +18,7 @@ const insights = [
     title: "Labor and Industry Trends Report November 2024",
     description: "The labor markets remain very much intact, as demonstrated by a still historically low unemployment rate.",
     image: "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b",
-    link: "#"
+    link: "/labor-trends"
   }
 ];
 
@@ -38,12 +39,21 @@ export const Insights = () => {
               </div>
               <h3 className="text-2xl font-bold mb-3">{insight.title}</h3>
               <p className="text-base text-gray-600 mb-4 leading-relaxed">{insight.description}</p>
-              <a
-                href={insight.link}
-                className="inline-flex items-center text-blue-600 hover:text-blue-700 text-base font-medium"
-              >
-                Learn More <ArrowRight className="ml-2 h-4 w-4" />
-              </a>
+              {insight.link.startsWith('#') ? (
+                <a
+                  href={insight.link}
+                  className="inline-flex items-center text-blue-600 hover:text-blue-700 text-base font-medium"
+                >
+                  Learn More <ArrowRight className="ml-2 h-4 w-4" />
+                </a>
+              ) : (
+                <Link
+                  to={insight.link}
+                  className="inline-flex items-center text-blue-600 hover:text-blue-700 text-base font-medium"
+                >
+                  Learn More <ArrowRight className="ml-2 h-4 w-4" />
+                </Link>
+              )}
             </div>
           ))}
         </div>
