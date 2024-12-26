@@ -10,8 +10,8 @@ export const About = () => {
           <div className="grid md:grid-cols-2 gap-16">
             <div className="space-y-8 animate-fade-up">
               <div className="bg-white/5 p-8 rounded-2xl backdrop-blur-sm">
-                <h3 className="text-3xl font-bold mb-6 text-white">Our Approach</h3>
-                <p className="text-gray-300 leading-relaxed text-lg">
+                <h3 className="text-2xl font-bold mb-6 text-white">Our Approach</h3>
+                <p className="text-base text-gray-300 leading-relaxed">
                   We believe in creating meaningful digital experiences that connect brands 
                   with their audiences. Our process is collaborative, iterative, and focused 
                   on delivering exceptional results that exceed expectations.
@@ -21,23 +21,23 @@ export const About = () => {
 
             <div className="space-y-8 animate-fade-up delay-100">
               <div className="bg-white/5 p-8 rounded-2xl backdrop-blur-sm">
-                <h3 className="text-3xl font-bold mb-6 text-white">Our Values</h3>
+                <h3 className="text-2xl font-bold mb-6 text-white">Our Values</h3>
                 <ul className="space-y-4">
                   <li className="flex items-center space-x-3 text-gray-300">
                     <span className="w-2 h-2 bg-blue-400 rounded-full"></span>
-                    <span className="text-lg">Innovation in every detail</span>
+                    <span className="text-base">Innovation in every detail</span>
                   </li>
                   <li className="flex items-center space-x-3 text-gray-300">
                     <span className="w-2 h-2 bg-teal-400 rounded-full"></span>
-                    <span className="text-lg">Commitment to excellence</span>
+                    <span className="text-base">Commitment to excellence</span>
                   </li>
                   <li className="flex items-center space-x-3 text-gray-300">
                     <span className="w-2 h-2 bg-blue-400 rounded-full"></span>
-                    <span className="text-lg">User-centered design</span>
+                    <span className="text-base">User-centered design</span>
                   </li>
                   <li className="flex items-center space-x-3 text-gray-300">
                     <span className="w-2 h-2 bg-teal-400 rounded-full"></span>
-                    <span className="text-lg">Sustainable solutions</span>
+                    <span className="text-base">Sustainable solutions</span>
                   </li>
                 </ul>
               </div>
