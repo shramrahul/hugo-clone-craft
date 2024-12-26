@@ -1,46 +1,38 @@
+import { GetStartedForm } from "./GetStartedForm";
+import { Linkedin, Twitter, Facebook, Youtube, Instagram } from "lucide-react";
+
 export const Footer = () => {
   return (
-    <footer className="bg-gray-900 text-white py-12">
+    <footer id="contact" className="py-24 bg-gradient-to-b from-slate-100 to-slate-200">
       <div className="container mx-auto px-4">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-          <div>
-            <h3 className="text-lg font-semibold mb-4">About Us</h3>
-            <p className="text-sm text-gray-300 leading-relaxed">
-              Avega Solutions delivers innovative technology solutions to help businesses thrive in the digital age.
-            </p>
-          </div>
-          <div>
-            <h3 className="text-lg font-semibold mb-4">Services</h3>
-            <ul className="space-y-2 text-sm text-gray-300">
-              <li>Technology Consulting</li>
-              <li>Digital Transformation</li>
-              <li>Cloud Solutions</li>
-              <li>Data Analytics</li>
-            </ul>
-          </div>
-          <div>
-            <h3 className="text-lg font-semibold mb-4">Contact</h3>
-            <ul className="space-y-2 text-sm text-gray-300">
-              <li>info@avegasolutions.com</li>
-              <li>1-800-AVEGA</li>
-              <li>123 Tech Street</li>
-              <li>San Francisco, CA 94105</li>
-            </ul>
-          </div>
-          <div>
-            <h3 className="text-lg font-semibold mb-4">Follow Us</h3>
-            <ul className="space-y-2 text-sm text-gray-300">
-              <li>LinkedIn</li>
-              <li>Twitter</li>
-              <li>Facebook</li>
-              <li>Instagram</li>
-            </ul>
-          </div>
-        </div>
-        <div className="mt-8 pt-8 border-t border-gray-800">
-          <p className="text-sm text-center text-gray-300">
-            © 2024 Avega Solutions. All rights reserved.
+        <div className="max-w-4xl mx-auto text-center">
+          <h2 className="text-5xl font-bold mb-8 text-gray-900">Let's Work Together</h2>
+          <p className="text-lg text-gray-600 mb-12">
+            We're always looking for new opportunities and collaborations
           </p>
+          <GetStartedForm />
+          <div className="mt-16 pt-8 border-t border-gray-200">
+            <div className="flex justify-between items-center">
+              <p className="text-base text-gray-600">© 2024 Avega Solutions. All rights reserved.</p>
+              <div className="flex space-x-4">
+                <a href="#" className="p-2 rounded-full bg-white hover:bg-gray-50 transition-colors">
+                  <Linkedin size={20} className="text-gray-600" />
+                </a>
+                <a href="#" className="p-2 rounded-full bg-white hover:bg-gray-50 transition-colors">
+                  <Twitter size={20} className="text-gray-600" />
+                </a>
+                <a href="#" className="p-2 rounded-full bg-white hover:bg-gray-50 transition-colors">
+                  <Facebook size={20} className="text-gray-600" />
+                </a>
+                <a href="#" className="p-2 rounded-full bg-white hover:bg-gray-50 transition-colors">
+                  <Youtube size={20} className="text-gray-600" />
+                </a>
+                <a href="#" className="p-2 rounded-full bg-white hover:bg-gray-50 transition-colors">
+                  <Instagram size={20} className="text-gray-600" />
+                </a>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </footer>
