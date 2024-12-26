@@ -40,9 +40,9 @@ const industries = [
 
 export const Industries = () => {
   return (
-    <section className="py-24 bg-white">
+    <section className="py-12 bg-white">
       <div className="container mx-auto px-4">
-        <div className="text-center mb-16">
+        <div className="text-center mb-8">
           <h2 className="text-4xl font-bold mb-4 text-gray-900">Industries</h2>
           <p className="text-lg text-gray-600">We Specialize In</p>
         </div>

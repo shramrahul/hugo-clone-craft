@@ -1,9 +1,9 @@
 export const About = () => {
   return (
-    <section id="about" className="py-24 bg-white">
+    <section id="about" className="py-12 bg-white">
       <div className="container mx-auto px-4">
         <div className="max-w-5xl mx-auto">
-          <h2 className="text-4xl font-bold mb-16 text-gray-900 text-center">
+          <h2 className="text-4xl font-bold mb-8 text-gray-900 text-center">
             About Us
           </h2>
           

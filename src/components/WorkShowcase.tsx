@@ -25,10 +25,10 @@ const sectors = [
 
 export const WorkShowcase = () => {
   return (
-    <section id="expertise" className="py-20 bg-white">
+    <section id="expertise" className="py-12 bg-white">
       <div className="container mx-auto px-4">
         <h2 className="text-4xl font-bold mb-4 text-gray-900 text-center">Our Expertise</h2>
-        <p className="text-gray-600 text-center mb-12 max-w-2xl mx-auto">
+        <p className="text-gray-600 text-center mb-8 max-w-2xl mx-auto">
           We deliver cutting-edge IT consulting services across various sectors, helping businesses transform and thrive in the digital age.
         </p>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
