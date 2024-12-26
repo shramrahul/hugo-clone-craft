@@ -1,66 +1,46 @@
-import { GetStartedForm } from "./GetStartedForm";
 import { Linkedin, Twitter, Facebook, Youtube, Instagram } from "lucide-react";
 
 export const Footer = () => {
   return (
-    <footer className="bg-gray-800 text-white py-16">
-      <div className="container mx-auto px-4">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
-          <div className="space-y-4">
-            <h3 className="font-semibold text-lg">Services</h3>
-            <ul className="space-y-2">
-              <li><a href="#" className="hover:text-gray-300">Digital Transformation</a></li>
-              <li><a href="#" className="hover:text-gray-300">Cloud Solutions</a></li>
-              <li><a href="#" className="hover:text-gray-300">Custom Software</a></li>
-            </ul>
+    <footer className="bg-[#333333] text-white py-12">
+      <div className="container mx-auto px-8">
+        <div className="flex flex-col lg:flex-row justify-between">
+          {/* Left side - Navigation Links */}
+          <div className="grid grid-cols-2 gap-x-24 gap-y-6">
+            <div className="space-y-4">
+              <a href="#" className="block text-lg hover:text-gray-300">Services</a>
+              <a href="#" className="block text-lg hover:text-gray-300">Work</a>
+              <a href="#" className="block text-lg hover:text-gray-300">Insights</a>
+              <a href="#" className="block text-lg hover:text-gray-300">Careers</a>
+            </div>
+            <div className="space-y-4">
+              <a href="#" className="block text-lg hover:text-gray-300">About</a>
+              <a href="#" className="block text-lg hover:text-gray-300">Privacy</a>
+              <a href="#" className="block text-lg hover:text-gray-300">Compliance & Disclosures</a>
+              <a href="#" className="block text-lg hover:text-gray-300">Contact</a>
+            </div>
           </div>
-          
-          <div className="space-y-4">
-            <h3 className="font-semibold text-lg">Work</h3>
-            <ul className="space-y-2">
-              <li><a href="#" className="hover:text-gray-300">Case Studies</a></li>
-              <li><a href="#" className="hover:text-gray-300">Portfolio</a></li>
-              <li><a href="#" className="hover:text-gray-300">Client Success</a></li>
-            </ul>
-          </div>
-          
-          <div className="space-y-4">
-            <h3 className="font-semibold text-lg">About</h3>
-            <ul className="space-y-2">
-              <li><a href="#" className="hover:text-gray-300">Our Story</a></li>
-              <li><a href="#" className="hover:text-gray-300">Team</a></li>
-              <li><a href="#" className="hover:text-gray-300">Careers</a></li>
-            </ul>
-          </div>
-          
-          <div className="space-y-4">
-            <h3 className="font-semibold text-lg">Contact</h3>
-            <ul className="space-y-2">
-              <li><a href="#" className="hover:text-gray-300">Get in Touch</a></li>
-              <li><a href="#" className="hover:text-gray-300">Support</a></li>
-              <li><a href="#" className="hover:text-gray-300">Privacy Policy</a></li>
-            </ul>
-          </div>
-        </div>
-        
-        <div className="border-t border-gray-700 pt-8 flex flex-col md:flex-row justify-between items-center">
-          <p className="text-gray-400 mb-4 md:mb-0">© 2024 Avega Solutions. All rights reserved.</p>
-          <div className="flex space-x-6">
-            <a href="#" className="text-gray-400 hover:text-white transition-colors">
-              <Linkedin className="w-5 h-5" />
-            </a>
-            <a href="#" className="text-gray-400 hover:text-white transition-colors">
-              <Twitter className="w-5 h-5" />
-            </a>
-            <a href="#" className="text-gray-400 hover:text-white transition-colors">
-              <Facebook className="w-5 h-5" />
-            </a>
-            <a href="#" className="text-gray-400 hover:text-white transition-colors">
-              <Youtube className="w-5 h-5" />
-            </a>
-            <a href="#" className="text-gray-400 hover:text-white transition-colors">
-              <Instagram className="w-5 h-5" />
-            </a>
+
+          {/* Right side - Social Icons and Copyright */}
+          <div className="mt-8 lg:mt-0 flex flex-col items-end space-y-6">
+            <div className="flex space-x-4">
+              <a href="#" className="bg-white rounded-full p-2 hover:opacity-80">
+                <Linkedin className="w-5 h-5 text-[#333333]" />
+              </a>
+              <a href="#" className="bg-white rounded-full p-2 hover:opacity-80">
+                <Twitter className="w-5 h-5 text-[#333333]" />
+              </a>
+              <a href="#" className="bg-white rounded-full p-2 hover:opacity-80">
+                <Facebook className="w-5 h-5 text-[#333333]" />
+              </a>
+              <a href="#" className="bg-white rounded-full p-2 hover:opacity-80">
+                <Youtube className="w-5 h-5 text-[#333333]" />
+              </a>
+              <a href="#" className="bg-white rounded-full p-2 hover:opacity-80">
+                <Instagram className="w-5 h-5 text-[#333333]" />
+              </a>
+            </div>
+            <p className="text-sm">2024 Copyright GlobalLogic Inc. All rights reserved.</p>
           </div>
         </div>
       </div>
