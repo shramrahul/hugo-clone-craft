@@ -16,12 +16,11 @@ const LaborTrends = () => {
 
         <div className="max-w-4xl mx-auto">
           <h1 className="text-5xl font-bold mb-4">Labor and Industry Trends</h1>
-          <p className="text-gray-600 mb-8">NOVEMBER 2024</p>
-          <p className="text-gray-600 mb-12">BY MICHAEL BLACKMAN</p>
+          <p className="text-gray-600 mb-12">NOVEMBER 2024</p>
 
           <h2 className="text-3xl font-bold mb-6">Right down the middle</h2>
           <p className="text-gray-700 mb-8 leading-relaxed">
-            The November BLS jobs data, following the October BLS data which was negatively impacted by hurricane and strike anomalies, follows the pattern seen throughout much of 2024. We are experiencing a "soft landing" with a slightly cooling economy. This was the Federal Reserve's goal—to begin an easing cycle. The labor markets remain very much intact, as demonstrated by a still historically low unemployment rate.
+            The November BLS jobs report underscores a steady economic trajectory, even as October's data faced temporary disruptions from hurricanes and strikes. Throughout 2024, the economy has been carefully easing into a "soft landing," reflecting the Federal Reserve's deliberate approach to cooling growth. Despite these adjustments, the labor market's strength remains evident, with unemployment rates holding near historic lows—a clear sign of resilience amid change.
           </p>
 
           <div className="bg-gray-100 rounded-lg p-8 mb-12">
