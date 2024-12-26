@@ -4,11 +4,12 @@ import { Textarea } from "@/components/ui/textarea";
 
 export const FormFields = () => {
   return (
-    <div className="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-6">
+    <div className="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-6 max-h-[70vh] overflow-y-auto px-2">
       <div className="space-y-2">
         <label className="text-base font-medium">* First Name</label>
         <Input 
           required 
+          placeholder="John"
           className="bg-white border-0 rounded-2xl h-12 text-base" 
         />
       </div>
@@ -17,6 +18,7 @@ export const FormFields = () => {
         <label className="text-base font-medium">* Last Name</label>
         <Input 
           required 
+          placeholder="Doe"
           className="bg-white border-0 rounded-2xl h-12 text-base" 
         />
       </div>
@@ -25,6 +27,7 @@ export const FormFields = () => {
         <label className="text-base font-medium">* Company Name</label>
         <Input 
           required 
+          placeholder="Your Company"
           className="bg-white border-0 rounded-2xl h-12 text-base" 
         />
       </div>
@@ -33,6 +36,7 @@ export const FormFields = () => {
         <label className="text-base font-medium">Business Phone</label>
         <Input 
           type="tel" 
+          placeholder="+1 (555) 000-0000"
           className="bg-white border-0 rounded-2xl h-12 text-base" 
         />
       </div>
@@ -42,6 +46,7 @@ export const FormFields = () => {
         <Input 
           type="email" 
           required 
+          placeholder="john@company.com"
           className="bg-white border-0 rounded-2xl h-12 text-base" 
         />
       </div>
@@ -106,7 +111,7 @@ export const FormFields = () => {
         <label className="text-base font-medium">Anything else you'd like to share before the meeting?</label>
         <Textarea 
           placeholder="I'm looking to..." 
-          className="min-h-[150px] bg-white border-0 rounded-2xl text-base p-4" 
+          className="min-h-[150px] bg-white border-0 rounded-2xl text-base p-4 resize-none" 
         />
       </div>
     </div>
