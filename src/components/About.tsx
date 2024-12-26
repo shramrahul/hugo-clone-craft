@@ -3,7 +3,7 @@ export const About = () => {
     <section id="about" className="py-24 bg-white">
       <div className="container mx-auto px-4">
         <div className="max-w-5xl mx-auto">
-          <h2 className="text-5xl font-bold mb-16 text-center bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-teal-600">
+          <h2 className="text-4xl font-bold mb-16 text-gray-900 text-center">
             About Us
           </h2>
           
