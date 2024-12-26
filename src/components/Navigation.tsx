@@ -30,7 +30,7 @@ export const Navigation = () => {
         } transform ${visible ? 'translate-y-0' : '-translate-y-full'}`}
       >
         <div className="container mx-auto px-4 flex justify-between items-center">
-          <a href="/" className="flex items-center">
+          <a href="/" className="flex items-center bg-transparent">
             <img src="/lovable-uploads/ed543da6-8cf5-475b-813e-b5e0f6060af5.png" alt="Avega Solutions" className="h-12" />
           </a>
           
