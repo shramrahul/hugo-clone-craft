@@ -10,11 +10,12 @@ export const About = () => {
           <div className="grid md:grid-cols-2 gap-16">
             <div className="space-y-8 animate-fade-up">
               <div className="bg-white/5 p-8 rounded-2xl backdrop-blur-sm">
-                <h3 className="text-2xl font-bold mb-6 text-white">Our Approach</h3>
+                <h3 className="text-2xl font-bold mb-6 text-white">Welcome to Avega</h3>
                 <p className="text-base text-gray-300 leading-relaxed">
-                  We believe in creating meaningful digital experiences that connect brands 
-                  with their audiences. Our process is collaborative, iterative, and focused 
-                  on delivering exceptional results that exceed expectations.
+                  At Avega, we are dedicated to transforming businesses through innovative IT solutions and cutting-edge technologies. 
+                  With a focus on excellence, we provide services that optimize operations, enhance efficiency, and drive digital transformation. 
+                  Our team of experts works closely with clients to ensure they stay ahead of the technological curve, enabling growth and success 
+                  in an ever-evolving digital world.
                 </p>
               </div>
             </div>
@@ -22,22 +23,29 @@ export const About = () => {
             <div className="space-y-8 animate-fade-up delay-100">
               <div className="bg-white/5 p-8 rounded-2xl backdrop-blur-sm">
                 <h3 className="text-2xl font-bold mb-6 text-white">Our Values</h3>
+                <p className="text-base text-gray-300 mb-6">
+                  Advanced Visionary Engineering & Growth Associates
+                </p>
                 <ul className="space-y-4">
                   <li className="flex items-center space-x-3 text-gray-300">
                     <span className="w-2 h-2 bg-blue-400 rounded-full"></span>
-                    <span className="text-base">Innovation in every detail</span>
+                    <span className="text-base">Advanced: At the forefront of technology, providing progressive solutions</span>
                   </li>
                   <li className="flex items-center space-x-3 text-gray-300">
                     <span className="w-2 h-2 bg-teal-400 rounded-full"></span>
-                    <span className="text-base">Commitment to excellence</span>
+                    <span className="text-base">Visionary: Anticipating the future of business and technology with foresight</span>
                   </li>
                   <li className="flex items-center space-x-3 text-gray-300">
                     <span className="w-2 h-2 bg-blue-400 rounded-full"></span>
-                    <span className="text-base">User-centered design</span>
+                    <span className="text-base">Engineering: Leveraging technical expertise to design robust, scalable systems</span>
                   </li>
                   <li className="flex items-center space-x-3 text-gray-300">
                     <span className="w-2 h-2 bg-teal-400 rounded-full"></span>
-                    <span className="text-base">Sustainable solutions</span>
+                    <span className="text-base">Growth: Driving sustainable growth through innovative IT strategies</span>
+                  </li>
+                  <li className="flex items-center space-x-3 text-gray-300">
+                    <span className="w-2 h-2 bg-blue-400 rounded-full"></span>
+                    <span className="text-base">Associates: A collaborative network of professionals working together</span>
                   </li>
                 </ul>
               </div>
