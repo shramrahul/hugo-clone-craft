@@ -1,4 +1,5 @@
 import { GetStartedForm } from "./GetStartedForm";
+import { Linkedin, Twitter, Facebook, Youtube, Instagram } from "lucide-react";
 
 export const Footer = () => {
   return (
@@ -13,10 +14,22 @@ export const Footer = () => {
           <div className="mt-16 pt-8 border-t border-gray-200">
             <div className="flex justify-between items-center">
               <p className="text-gray-600">© 2024 Avega Solutions. All rights reserved.</p>
-              <div className="space-x-6">
-                <a href="#" className="text-gray-600 hover:text-black">Twitter</a>
-                <a href="#" className="text-gray-600 hover:text-black">Instagram</a>
-                <a href="#" className="text-gray-600 hover:text-black">LinkedIn</a>
+              <div className="flex space-x-4">
+                <a href="#" className="p-2 rounded-full bg-gray-100 hover:bg-gray-200 transition-colors">
+                  <Linkedin size={20} className="text-gray-600" />
+                </a>
+                <a href="#" className="p-2 rounded-full bg-gray-100 hover:bg-gray-200 transition-colors">
+                  <Twitter size={20} className="text-gray-600" />
+                </a>
+                <a href="#" className="p-2 rounded-full bg-gray-100 hover:bg-gray-200 transition-colors">
+                  <Facebook size={20} className="text-gray-600" />
+                </a>
+                <a href="#" className="p-2 rounded-full bg-gray-100 hover:bg-gray-200 transition-colors">
+                  <Youtube size={20} className="text-gray-600" />
+                </a>
+                <a href="#" className="p-2 rounded-full bg-gray-100 hover:bg-gray-200 transition-colors">
+                  <Instagram size={20} className="text-gray-600" />
+                </a>
               </div>
             </div>
           </div>
