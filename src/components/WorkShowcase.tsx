@@ -25,8 +25,8 @@ export const WorkShowcase = () => {
   return (
     <section id="expertise" className="py-20 bg-white">
       <div className="container mx-auto px-4">
-        <h2 className="text-4xl font-bold mb-4 text-gray-900 text-center">Our Expertise</h2>
-        <p className="text-lg text-gray-600 text-center mb-12 max-w-2xl mx-auto">
+        <h2 className="text-4xl font-bold mb-4 text-center">Our Expertise</h2>
+        <p className="text-gray-600 text-center mb-12 max-w-2xl mx-auto">
           We deliver cutting-edge IT consulting services across various sectors, helping businesses transform and thrive in the digital age.
         </p>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -44,7 +44,7 @@ export const WorkShowcase = () => {
               <div className="absolute inset-0 bg-black/70 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
                 <div className="text-white text-center p-6">
                   <h3 className="text-2xl font-bold mb-2">{sector.title}</h3>
-                  <p className="text-base">{sector.description}</p>
+                  <p className="text-gray-200">{sector.description}</p>
                 </div>
               </div>
             </div>

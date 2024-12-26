@@ -26,7 +26,7 @@ export const Insights = () => {
   return (
     <section id="insights" className="py-24 bg-white">
       <div className="container mx-auto px-4">
-        <h2 className="text-4xl font-bold mb-16 text-gray-900 text-center">Insights</h2>
+        <h2 className="text-4xl font-bold mb-16 text-center">Insights</h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {insights.map((insight, index) => (
             <div key={index} className="group">
@@ -37,7 +37,7 @@ export const Insights = () => {
                   className="w-full h-[200px] object-cover transition-transform duration-500 group-hover:scale-105"
                 />
               </div>
-              <h3 className="text-2xl font-bold mb-3 text-gray-900">{insight.title}</h3>
+              <h3 className="text-2xl font-bold mb-3">{insight.title}</h3>
               <p className="text-base text-gray-600 mb-4 leading-relaxed">{insight.description}</p>
               {insight.link.startsWith('#') ? (
                 <a
