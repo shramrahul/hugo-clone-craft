@@ -1,25 +1,11 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { Menu, X, ChevronDown, User, Server, BarChart } from "lucide-react";
 import { GetStartedForm } from "./GetStartedForm";
 import { useNavigate } from "react-router-dom";
 
 export const Navigation = () => {
-  const [isScrolled, setIsScrolled] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [prevScrollPos, setPrevScrollPos] = useState(0);
-  const [visible, setVisible] = useState(true);
   const navigate = useNavigate();
-
-  useEffect(() => {
-    const handleScroll = () => {
-      const currentScrollPos = window.scrollY;
-      setVisible(prevScrollPos > currentScrollPos || currentScrollPos < 10);
-      setPrevScrollPos(currentScrollPos);
-      setIsScrolled(currentScrollPos > 50);
-    };
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, [prevScrollPos]);
 
   const scrollToSection = (sectionId: string) => {
     console.log('Scrolling to section:', sectionId);
@@ -37,12 +23,8 @@ export const Navigation = () => {
       <div className="bg-[#FEF7CD] text-sm py-2 text-center">
         Avega Solutions is hiring! Explore our positions and <a href="/careers" className="underline">apply today</a>.
       </div>
-      <nav 
-        className={`fixed w-full z-50 transition-all duration-300 ${
-          isScrolled ? "bg-white/90 backdrop-blur-md py-4" : "bg-transparent py-6"
-        } transform ${visible ? 'translate-y-0' : '-translate-y-full'}`}
-      >
-        <div className="container mx-auto px-4 flex justify-between items-center">
+      <nav className="bg-white border-b">
+        <div className="container mx-auto px-4 flex justify-between items-center py-4">
           <a href="/" className="flex items-center bg-transparent">
             <img src="/lovable-uploads/ed543da6-8cf5-475b-813e-b5e0f6060af5.png" alt="Avega Solutions" className="h-12" />
           </a>
