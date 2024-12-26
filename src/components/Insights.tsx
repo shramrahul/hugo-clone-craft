@@ -25,7 +25,7 @@ export const Insights = () => {
   return (
     <section className="py-24 bg-white">
       <div className="container mx-auto px-4">
-        <h2 className="text-5xl font-bold mb-16 text-center">Insights</h2>
+        <h2 className="text-4xl font-bold mb-16 text-center">Insights</h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {insights.map((insight, index) => (
             <div key={index} className="group">
@@ -36,11 +36,11 @@ export const Insights = () => {
                   className="w-full h-[200px] object-cover transition-transform duration-500 group-hover:scale-105"
                 />
               </div>
-              <h3 className="text-2xl font-bold mb-4">{insight.title}</h3>
-              <p className="text-gray-600 mb-4">{insight.description}</p>
+              <h3 className="text-2xl font-bold mb-3">{insight.title}</h3>
+              <p className="text-base text-gray-600 mb-4 leading-relaxed">{insight.description}</p>
               <a
                 href={insight.link}
-                className="inline-flex items-center text-blue-600 hover:text-blue-700 font-medium"
+                className="inline-flex items-center text-blue-600 hover:text-blue-700 text-base font-medium"
               >
                 Learn More <ArrowRight className="ml-2 h-4 w-4" />
               </a>
