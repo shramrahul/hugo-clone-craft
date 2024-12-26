@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { GetStartedForm } from "./GetStartedForm";
 
 export const Hero = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -39,9 +40,7 @@ export const Hero = () => {
           <p className="text-xl text-gray-600 max-w-xl">
             We're not traditional outsourcers. We're built to be your partners in progress, your catalysts for growth, and the drivers of your performance.
           </p>
-          <button className="bg-black text-white px-8 py-4 rounded-full text-lg font-medium hover:bg-gray-800 transition-colors">
-            Build your Dream Team
-          </button>
+          <GetStartedForm />
           
           <div className="mt-12 bg-[#E5F9FB] p-6 rounded-xl">
             <div className="flex items-start space-x-4">
