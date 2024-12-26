@@ -22,7 +22,7 @@ export const Navigation = () => {
   return (
     <>
       <div className="bg-[#FEF7CD] text-sm py-2 text-center">
-        Hugo is hiring! Explore our positions and <a href="#" className="underline">apply today</a>.
+        Avega Solutions is hiring! Explore our positions and <a href="#" className="underline">apply today</a>.
       </div>
       <nav 
         className={`fixed w-full z-50 transition-all duration-300 ${
@@ -30,8 +30,8 @@ export const Navigation = () => {
         } transform ${visible ? 'translate-y-0' : '-translate-y-full'}`}
       >
         <div className="container mx-auto px-4 flex justify-between items-center">
-          <a href="/" className="text-3xl font-bold text-[#FFB800]">
-            hugo
+          <a href="/" className="flex items-center">
+            <img src="/lovable-uploads/ed543da6-8cf5-475b-813e-b5e0f6060af5.png" alt="Avega Solutions" className="h-12" />
           </a>
           
           <button

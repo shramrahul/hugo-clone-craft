@@ -12,7 +12,7 @@ export const Footer = () => {
           <GetStartedForm />
           <div className="mt-16 pt-8 border-t border-gray-200">
             <div className="flex justify-between items-center">
-              <p className="text-gray-600">© 2024 HUGO. All rights reserved.</p>
+              <p className="text-gray-600">© 2024 Avega Solutions. All rights reserved.</p>
               <div className="space-x-6">
                 <a href="#" className="text-gray-600 hover:text-black">Twitter</a>
                 <a href="#" className="text-gray-600 hover:text-black">Instagram</a>
