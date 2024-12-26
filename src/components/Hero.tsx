@@ -31,10 +31,10 @@ export const Hero = () => {
           </div>
         </div>
         <div className="lg:w-1/2 space-y-6 mt-12 lg:mt-0">
-          <div className="inline-block px-4 py-2 bg-gray-100 rounded-full text-base">
+          <div className="inline-block px-4 py-2 bg-gray-100 rounded-full text-base text-gray-900">
             Outsourcing+
           </div>
-          <h1 className="text-5xl font-bold leading-tight">
+          <h1 className="text-4xl font-bold leading-tight text-gray-900">
             Built to make you better.
           </h1>
           <p className="text-lg text-gray-600 max-w-xl">
@@ -46,7 +46,7 @@ export const Hero = () => {
             <div className="flex items-start space-x-4">
               <img src="/placeholder.svg" alt="Case study" className="w-16 h-16 rounded-lg" />
               <div>
-                <h3 className="text-xl font-bold mb-2">How Hugo Helped A Leading Innovator Confront Inclusion Gaps</h3>
+                <h3 className="text-xl font-bold mb-2 text-gray-900">How Hugo Helped A Leading Innovator Confront Inclusion Gaps</h3>
                 <p className="text-base text-gray-600">
                   Learn how Hugo, by collecting 600,000 tailored photo IDs in just three months, significantly enhanced AI inclusivity through a collaboration with a leading tech innovator, improving visual recognition technology.
                 </p>
