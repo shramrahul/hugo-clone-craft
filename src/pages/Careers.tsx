@@ -1,7 +1,9 @@
 import { Navigation } from "@/components/Navigation";
 import { Footer } from "@/components/Footer";
-import { Briefcase, MapPin, Clock } from "lucide-react";
+import { Briefcase, MapPin, Clock, Search } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { useState } from "react";
 
 const DUMMY_JOBS = [
   {
@@ -36,7 +38,17 @@ const DUMMY_JOBS = [
 
 const Careers = () => {
   console.log("Rendering Careers page");
+  const [searchQuery, setSearchQuery] = useState("");
   
+  const filteredJobs = DUMMY_JOBS.filter((job) => {
+    const searchTerm = searchQuery.toLowerCase();
+    return (
+      job.title.toLowerCase().includes(searchTerm) ||
+      job.description.toLowerCase().includes(searchTerm) ||
+      job.location.toLowerCase().includes(searchTerm)
+    );
+  });
+
   return (
     <div className="min-h-screen bg-white">
       <Navigation />
@@ -46,37 +58,54 @@ const Careers = () => {
           <p className="text-gray-600 mb-12">
             We're always looking for talented individuals to join our team. Check out our current openings below.
           </p>
+
+          <div className="relative mb-8">
+            <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
+            <Input
+              type="text"
+              placeholder="Search for jobs..."
+              value={searchQuery}
+              onChange={(e) => setSearchQuery(e.target.value)}
+              className="pl-10 w-full"
+            />
+          </div>
           
           <div className="space-y-6">
-            {DUMMY_JOBS.map((job) => (
-              <div
-                key={job.id}
-                className="border rounded-lg p-6 hover:shadow-lg transition-shadow bg-white"
-              >
-                <div className="flex items-start justify-between">
-                  <div>
-                    <h3 className="text-xl font-semibold mb-2">{job.title}</h3>
-                    <div className="flex items-center gap-4 text-gray-600 mb-4">
-                      <div className="flex items-center">
-                        <MapPin className="w-4 h-4 mr-1" />
-                        {job.location}
-                      </div>
-                      <div className="flex items-center">
-                        <Clock className="w-4 h-4 mr-1" />
-                        {job.type}
-                      </div>
-                    </div>
-                    <p className="text-gray-600">{job.description}</p>
-                  </div>
-                  <Briefcase className="w-6 h-6 text-gray-400" />
-                </div>
-                <div className="mt-4">
-                  <Button variant="outline">
-                    Apply Now
-                  </Button>
-                </div>
+            {filteredJobs.length === 0 ? (
+              <div className="text-center py-8 text-gray-500">
+                No jobs found matching your search criteria.
               </div>
-            ))}
+            ) : (
+              filteredJobs.map((job) => (
+                <div
+                  key={job.id}
+                  className="border rounded-lg p-6 hover:shadow-lg transition-shadow bg-white"
+                >
+                  <div className="flex items-start justify-between">
+                    <div>
+                      <h3 className="text-xl font-semibold mb-2">{job.title}</h3>
+                      <div className="flex items-center gap-4 text-gray-600 mb-4">
+                        <div className="flex items-center">
+                          <MapPin className="w-4 h-4 mr-1" />
+                          {job.location}
+                        </div>
+                        <div className="flex items-center">
+                          <Clock className="w-4 h-4 mr-1" />
+                          {job.type}
+                        </div>
+                      </div>
+                      <p className="text-gray-600">{job.description}</p>
+                    </div>
+                    <Briefcase className="w-6 h-6 text-gray-400" />
+                  </div>
+                  <div className="mt-4">
+                    <Button variant="outline">
+                      Apply Now
+                    </Button>
+                  </div>
+                </div>
+              ))
+            )}
           </div>
         </div>
       </main>
