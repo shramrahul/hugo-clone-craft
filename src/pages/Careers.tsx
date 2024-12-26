@@ -8,6 +8,14 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@
 import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
 import { Toggle } from "@/components/ui/toggle";
 
+const SALARY_RANGES = [
+  { label: "All Salaries", value: "all", min: 0, max: Infinity },
+  { label: "$0 - $50,000", value: "0-50", min: 0, max: 50000 },
+  { label: "$50,000 - $100,000", value: "50-100", min: 50000, max: 100000 },
+  { label: "$100,000 - $150,000", value: "100-150", min: 100000, max: 150000 },
+  { label: "$150,000+", value: "150+", min: 150000, max: Infinity },
+];
+
 const DUMMY_JOBS = [
   {
     id: 1,
