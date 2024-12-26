@@ -21,17 +21,18 @@ export const GetStartedForm = () => {
           Get Started
         </Button>
       </DialogTrigger>
-      <DialogContent className="sm:max-w-[600px] bg-[#FEF7CD]">
+      <DialogContent className="sm:max-w-[800px] bg-[#FEF7CD] p-8 rounded-3xl">
         <FormHeader onClose={() => setOpen(false)} />
         <form onSubmit={handleSubmit} className="space-y-6">
           <FormFields />
-          <Button 
-            type="submit" 
-            className="w-full bg-black text-white hover:bg-gray-800"
-            onClick={() => setOpen(false)}
-          >
-            Get Started Free
-          </Button>
+          <div className="flex justify-center mt-8">
+            <Button 
+              type="submit" 
+              className="w-fit bg-black text-white hover:bg-gray-800 rounded-full px-12 py-6 text-lg"
+            >
+              Get Started Free
+            </Button>
+          </div>
         </form>
       </DialogContent>
     </Dialog>

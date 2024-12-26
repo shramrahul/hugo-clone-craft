@@ -4,37 +4,52 @@ import { Textarea } from "@/components/ui/textarea";
 
 export const FormFields = () => {
   return (
-    <>
-      <div className="grid grid-cols-2 gap-4">
-        <div className="space-y-2">
-          <label className="text-sm font-medium">* First Name</label>
-          <Input required />
-        </div>
-        <div className="space-y-2">
-          <label className="text-sm font-medium">* Last Name</label>
-          <Input required />
-        </div>
+    <div className="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-6">
+      <div className="space-y-2">
+        <label className="text-base font-medium">* First Name</label>
+        <Input 
+          required 
+          className="bg-white border-0 rounded-2xl h-12 text-base" 
+        />
       </div>
       
       <div className="space-y-2">
-        <label className="text-sm font-medium">* Company Name</label>
-        <Input required />
+        <label className="text-base font-medium">* Last Name</label>
+        <Input 
+          required 
+          className="bg-white border-0 rounded-2xl h-12 text-base" 
+        />
       </div>
       
-      <div className="space-y-2">
-        <label className="text-sm font-medium">Business Phone</label>
-        <Input type="tel" />
+      <div className="space-y-2 md:col-span-2">
+        <label className="text-base font-medium">* Company Name</label>
+        <Input 
+          required 
+          className="bg-white border-0 rounded-2xl h-12 text-base" 
+        />
       </div>
       
-      <div className="space-y-2">
-        <label className="text-sm font-medium">* Business Email</label>
-        <Input type="email" required />
+      <div className="space-y-2 md:col-span-2">
+        <label className="text-base font-medium">Business Phone</label>
+        <Input 
+          type="tel" 
+          className="bg-white border-0 rounded-2xl h-12 text-base" 
+        />
       </div>
       
-      <div className="space-y-2">
-        <label className="text-sm font-medium">* What services are you looking for?</label>
+      <div className="space-y-2 md:col-span-2">
+        <label className="text-base font-medium">* Business Email</label>
+        <Input 
+          type="email" 
+          required 
+          className="bg-white border-0 rounded-2xl h-12 text-base" 
+        />
+      </div>
+      
+      <div className="space-y-2 md:col-span-2">
+        <label className="text-base font-medium">* What services are you looking for?</label>
         <Select>
-          <SelectTrigger>
+          <SelectTrigger className="bg-white border-0 rounded-2xl h-12 text-base">
             <SelectValue placeholder="Choose Services" />
           </SelectTrigger>
           <SelectContent>
@@ -45,10 +60,10 @@ export const FormFields = () => {
         </Select>
       </div>
       
-      <div className="space-y-2">
-        <label className="text-sm font-medium">* How soon are you looking to get started?</label>
+      <div className="space-y-2 md:col-span-2">
+        <label className="text-base font-medium">* How soon are you looking to get started?</label>
         <Select>
-          <SelectTrigger>
+          <SelectTrigger className="bg-white border-0 rounded-2xl h-12 text-base">
             <SelectValue placeholder="Choose One" />
           </SelectTrigger>
           <SelectContent>
@@ -59,10 +74,10 @@ export const FormFields = () => {
         </Select>
       </div>
       
-      <div className="space-y-2">
-        <label className="text-sm font-medium">* How many new team members do you need?</label>
+      <div className="space-y-2 md:col-span-2">
+        <label className="text-base font-medium">* How many new team members do you need?</label>
         <Select>
-          <SelectTrigger>
+          <SelectTrigger className="bg-white border-0 rounded-2xl h-12 text-base">
             <SelectValue placeholder="Choose One" />
           </SelectTrigger>
           <SelectContent>
@@ -73,10 +88,10 @@ export const FormFields = () => {
         </Select>
       </div>
       
-      <div className="space-y-2">
-        <label className="text-sm font-medium">* What best describes your journey in outsourcing?</label>
+      <div className="space-y-2 md:col-span-2">
+        <label className="text-base font-medium">* What best describes your journey in outsourcing?</label>
         <Select>
-          <SelectTrigger>
+          <SelectTrigger className="bg-white border-0 rounded-2xl h-12 text-base">
             <SelectValue placeholder="Choose One" />
           </SelectTrigger>
           <SelectContent>
@@ -87,10 +102,13 @@ export const FormFields = () => {
         </Select>
       </div>
       
-      <div className="space-y-2">
-        <label className="text-sm font-medium">Anything else you'd like to share before the meeting?</label>
-        <Textarea placeholder="I'm looking to..." className="min-h-[100px]" />
+      <div className="space-y-2 md:col-span-2">
+        <label className="text-base font-medium">Anything else you'd like to share before the meeting?</label>
+        <Textarea 
+          placeholder="I'm looking to..." 
+          className="min-h-[150px] bg-white border-0 rounded-2xl text-base p-4" 
+        />
       </div>
-    </>
+    </div>
   );
 };
