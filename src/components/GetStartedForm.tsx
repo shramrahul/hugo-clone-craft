@@ -16,9 +16,9 @@ export const GetStartedForm = () => {
 
   return (
     <Dialog open={open} onOpenChange={setOpen}>
-      <DialogTrigger asChild>
+      <DialogTrigger asChild data-trigger="contact">
         <Button className="bg-black text-white px-6 py-2 rounded-full hover:bg-gray-800 transition-colors">
-          Get Started
+          Let's Connect
         </Button>
       </DialogTrigger>
       <DialogContent className="sm:max-w-[800px] bg-[#FEF7CD] p-8 rounded-3xl">
@@ -30,7 +30,7 @@ export const GetStartedForm = () => {
               type="submit" 
               className="w-fit bg-black text-white hover:bg-gray-800 rounded-full px-12 py-6 text-lg"
             >
-              Get Started Free
+              Let's Connect
             </Button>
           </div>
         </form>

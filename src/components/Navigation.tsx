@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { Menu, X, ChevronDown } from "lucide-react";
+import { Menu, X, ChevronDown, Briefcase, User, Server, BarChart } from "lucide-react";
 import { GetStartedForm } from "./GetStartedForm";
 
 export const Navigation = () => {
@@ -42,28 +42,27 @@ export const Navigation = () => {
           </button>
 
           <div className={`lg:flex items-center space-x-8 ${isMenuOpen ? "absolute top-full left-0 right-0 bg-white p-4 shadow-lg" : "hidden"}`}>
-            <div className="relative group">
-              <a href="#" className="flex items-center hover:opacity-70 transition-opacity">
-                Solutions <ChevronDown className="ml-1 w-4 h-4" />
-              </a>
-            </div>
-            <a href="#" className="hover:opacity-70 transition-opacity">
-              Our Agents
+            <a href="#" className="flex items-center hover:opacity-70 transition-opacity">
+              <Briefcase className="w-4 h-4 mr-1" /> Find Work
             </a>
-            <a href="#" className="hover:opacity-70 transition-opacity">
-              Pricing
+            <a href="#" className="flex items-center hover:opacity-70 transition-opacity">
+              <User className="w-4 h-4 mr-1" /> Careers
             </a>
-            <div className="relative group">
-              <a href="#" className="flex items-center hover:opacity-70 transition-opacity">
-                Company <ChevronDown className="ml-1 w-4 h-4" />
-              </a>
-            </div>
-            <div className="relative group">
-              <a href="#" className="flex items-center hover:opacity-70 transition-opacity">
-                Resources <ChevronDown className="ml-1 w-4 h-4" />
-              </a>
-            </div>
-            <GetStartedForm />
+            <a href="#" className="flex items-center hover:opacity-70 transition-opacity">
+              <Server className="w-4 h-4 mr-1" /> Services
+            </a>
+            <a href="#" className="flex items-center hover:opacity-70 transition-opacity">
+              <BarChart className="w-4 h-4 mr-1" /> Insights
+            </a>
+            <a href="#" className="flex items-center hover:opacity-70 transition-opacity">
+              About Us
+            </a>
+            <button 
+              className="bg-black text-white px-6 py-2 rounded-full hover:bg-gray-800 transition-colors"
+              onClick={() => document.querySelector<HTMLButtonElement>('[data-trigger="contact"]')?.click()}
+            >
+              Let's Connect
+            </button>
           </div>
         </div>
       </nav>
