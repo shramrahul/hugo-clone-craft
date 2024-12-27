@@ -45,7 +45,7 @@ export const Hero = () => {
         >
           <motion.div variants={itemVariants}>
             <span className="inline-flex items-center px-4 py-1.5 rounded-full text-sm font-medium bg-gradient-to-r from-purple-500 to-blue-500 text-white">
-              Advancing Valuable Expertise in Global Application <ArrowRight className="ml-2 w-4 h-4" />
+              Transforming Business with Technology Excellence <ArrowRight className="ml-2 w-4 h-4" />
             </span>
           </motion.div>
           
