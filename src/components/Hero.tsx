@@ -12,22 +12,33 @@ export const Hero = () => {
     <div className="py-12 bg-white">
       <div className="container mx-auto px-4 flex flex-col lg:flex-row items-center">
         <div className="lg:w-1/2 relative">
-          <div className="grid grid-cols-4 gap-4">
-            {Array(16).fill(null).map((_, i) => (
+          <div className="grid grid-cols-3 gap-6">
+            {Array(9).fill(null).map((_, i) => (
               <div 
                 key={i} 
-                className={`w-20 h-20 rounded-full ${
-                  i % 3 === 0 ? 'border-4 border-[#FFB800]' : 'border-2 border-gray-100'
-                }`}
+                className={`aspect-square rounded-full ${
+                  i % 3 === 0 ? 'bg-[#FFB800]/10 border-2 border-[#FFB800]' : 
+                  i % 2 === 0 ? 'bg-blue-50 border border-blue-200' : 
+                  'bg-gray-50 border border-gray-200'
+                } transform transition-transform hover:scale-105 duration-300`}
               />
             ))}
           </div>
-          {/* Add profile images */}
-          <div className="absolute top-1/4 right-1/4">
-            <img src="/placeholder.svg" alt="Team member" className="w-12 h-12 rounded-full border-2 border-white" />
+          
+          {/* Profile images with improved positioning */}
+          <div className="absolute top-1/4 right-1/4 transform hover:scale-110 transition-transform duration-300">
+            <img 
+              src="https://images.unsplash.com/photo-1535268647677-300dbf3d78d1" 
+              alt="Team member" 
+              className="w-16 h-16 rounded-full border-2 border-white shadow-lg object-cover" 
+            />
           </div>
-          <div className="absolute bottom-1/3 left-1/3">
-            <img src="/placeholder.svg" alt="Team member" className="w-12 h-12 rounded-full border-2 border-white" />
+          <div className="absolute bottom-1/3 left-1/3 transform hover:scale-110 transition-transform duration-300">
+            <img 
+              src="https://images.unsplash.com/photo-1501286353178-1ec881214838" 
+              alt="Team member" 
+              className="w-16 h-16 rounded-full border-2 border-white shadow-lg object-cover" 
+            />
           </div>
         </div>
         <div className="lg:w-1/2 space-y-6 mt-12 lg:mt-0">
@@ -42,9 +53,13 @@ export const Hero = () => {
           </p>
           <GetStartedForm />
           
-          <div className="mt-12 bg-[#E5F9FB] p-6 rounded-xl">
+          <div className="mt-8 bg-[#E5F9FB] p-6 rounded-xl shadow-sm hover:shadow-md transition-shadow duration-300">
             <div className="flex items-start space-x-4">
-              <img src="/placeholder.svg" alt="Case study" className="w-16 h-16 rounded-lg" />
+              <img 
+                src="https://images.unsplash.com/photo-1485833077593-4278bba3f11f" 
+                alt="Case study" 
+                className="w-16 h-16 rounded-lg object-cover" 
+              />
               <div>
                 <h3 className="text-xl font-bold mb-2">How Hugo Helped A Leading Innovator Confront Inclusion Gaps</h3>
                 <p className="text-base text-gray-600">
