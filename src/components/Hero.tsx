@@ -83,18 +83,53 @@ export const Hero = () => {
             
             <motion.h1 
               variants={itemVariants}
-              className="text-3xl md:text-4xl font-bold leading-tight"
+              className="text-2xl md:text-3xl font-bold leading-tight tracking-wide"
             >
-              <span className="inline-block text-blue-600 font-black animate-bounce hover:scale-125 transition-transform duration-300">A</span>
-              <span className="inline-block text-gray-700 hover:text-blue-600 transition-colors">dvancing </span>
-              <span className="inline-block text-blue-600 font-black animate-bounce hover:scale-125 transition-transform duration-300">V</span>
-              <span className="inline-block text-gray-700 hover:text-blue-600 transition-colors">aluable </span>
-              <span className="inline-block text-blue-600 font-black animate-bounce hover:scale-125 transition-transform duration-300">E</span>
-              <span className="inline-block text-gray-700 hover:text-blue-600 transition-colors">xpertise in </span>
-              <span className="inline-block text-blue-600 font-black animate-bounce hover:scale-125 transition-transform duration-300">G</span>
-              <span className="inline-block text-gray-700 hover:text-blue-600 transition-colors">lobal </span>
-              <span className="inline-block text-blue-600 font-black animate-bounce hover:scale-125 transition-transform duration-300">A</span>
-              <span className="inline-block text-gray-700 hover:text-blue-600 transition-colors">pplications</span>
+              <motion.span 
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.2 }}
+                className="inline-block text-blue-600 font-black mr-2 hover:scale-110 transition-transform duration-300"
+              >
+                A
+              </motion.span>
+              <span className="inline-block text-gray-700 mr-2">dvancing</span>
+              <motion.span 
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.4 }}
+                className="inline-block text-blue-600 font-black mr-2 hover:scale-110 transition-transform duration-300"
+              >
+                V
+              </motion.span>
+              <span className="inline-block text-gray-700 mr-2">aluable</span>
+              <motion.span 
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.6 }}
+                className="inline-block text-blue-600 font-black mr-2 hover:scale-110 transition-transform duration-300"
+              >
+                E
+              </motion.span>
+              <span className="inline-block text-gray-700 mr-2">xpertise in</span>
+              <motion.span 
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.8 }}
+                className="inline-block text-blue-600 font-black mr-2 hover:scale-110 transition-transform duration-300"
+              >
+                G
+              </motion.span>
+              <span className="inline-block text-gray-700 mr-2">lobal</span>
+              <motion.span 
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 1.0 }}
+                className="inline-block text-blue-600 font-black mr-2 hover:scale-110 transition-transform duration-300"
+              >
+                A
+              </motion.span>
+              <span className="inline-block text-gray-700">pplications</span>
             </motion.h1>
             
             <motion.p 
