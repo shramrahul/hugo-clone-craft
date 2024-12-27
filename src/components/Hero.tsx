@@ -32,13 +32,13 @@ export const Hero = () => {
         </div>
         <div className="lg:w-1/2 space-y-6 mt-12 lg:mt-0">
           <div className="inline-block px-4 py-2 bg-gray-100 rounded-full text-base">
-            Outsourcing+
+            Transform Your Business
           </div>
           <h1 className="text-5xl font-bold leading-tight">
-            Built to make you better.
+            Empowering Innovation Through Expert Solutions
           </h1>
           <p className="text-lg text-gray-600 max-w-xl">
-            We're not traditional outsourcers. We're built to be your partners in progress, your catalysts for growth, and the drivers of your performance.
+            Partner with us to unlock your business potential. We combine industry expertise with cutting-edge technology to deliver transformative solutions that drive real results.
           </p>
           <GetStartedForm />
           
