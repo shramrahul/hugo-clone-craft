@@ -50,8 +50,8 @@ export const Testimonials = () => {
                     }}
                   />
                 </div>
-                <div className="p-6">
-                  <div className="flex items-center mb-4">
+                <div className="p-6 text-center">
+                  <div className="flex items-center justify-center mb-4">
                     <img
                       src={testimonial.avatar}
                       alt={testimonial.name}
