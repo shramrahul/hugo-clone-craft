@@ -10,12 +10,12 @@ export const Hero = () => {
         <div className="max-w-4xl mx-auto space-y-8">
           <div>
             <span className="inline-flex items-center px-4 py-1.5 rounded-full text-sm font-medium bg-gradient-to-r from-purple-500 to-blue-500 text-white">
-              Transforming Business with Technology Excellence <ArrowRight className="ml-2 w-4 h-4" />
+              Advanced Vision Engineering and Global Analytics <ArrowRight className="ml-2 w-4 h-4" />
             </span>
           </div>
           
           <h1 className="text-2xl md:text-3xl font-bold leading-tight tracking-wide whitespace-nowrap">
-            <span className="text-gray-700">Transforming Business with Technology Excellence</span>
+            <span className="text-gray-700">Advanced Vision Engineering and Global Analytics</span>
           </h1>
           
           <p className="text-lg md:text-xl text-gray-600 leading-relaxed">
