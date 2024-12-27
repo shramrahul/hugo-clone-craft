@@ -85,7 +85,12 @@ export const Hero = () => {
               variants={itemVariants}
               className="text-4xl md:text-5xl font-bold leading-tight bg-gradient-to-r from-gray-900 via-purple-900 to-violet-900 bg-clip-text text-transparent"
             >
-              Transforming Businesses Through Technology Excellence
+              <span className="inline-block hover:text-blue-600 transition-colors">Advancing</span>{" "}
+              <span className="inline-block hover:text-blue-600 transition-colors">Valuable</span>{" "}
+              <span className="inline-block hover:text-blue-600 transition-colors">Expertise</span>{" "}
+              <span className="inline-block hover:text-blue-600 transition-colors">in</span>{" "}
+              <span className="inline-block hover:text-blue-600 transition-colors">Global</span>{" "}
+              <span className="inline-block hover:text-blue-600 transition-colors">Applications</span>
             </motion.h1>
             
             <motion.p 
