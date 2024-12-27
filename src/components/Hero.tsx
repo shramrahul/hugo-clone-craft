@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { GetStartedForm } from "./GetStartedForm";
 import { motion } from "framer-motion";
-import { ArrowRight, Code, Cloud, BarChart, Shield } from "lucide-react";
+import { ArrowRight, Trophy, Users, Building2, Globe } from "lucide-react";
 
 export const Hero = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -32,30 +32,34 @@ export const Hero = () => {
     }
   };
 
-  const features = [
+  const stats = [
     {
-      title: "Software Development",
-      icon: <Code className="w-6 h-6" />,
-      description: "Custom Solutions",
-      color: "from-blue-500/20 to-purple-500/20"
+      title: "Years of Excellence",
+      value: "15+",
+      icon: <Trophy className="w-6 h-6" />,
+      description: "Industry Experience",
+      color: "from-amber-500/20 to-yellow-500/20"
     },
     {
-      title: "Cloud Services",
-      icon: <Cloud className="w-6 h-6" />,
-      description: "Scalable Infrastructure",
+      title: "Global Clients",
+      value: "500+",
+      icon: <Globe className="w-6 h-6" />,
+      description: "Trusted Partners",
+      color: "from-blue-500/20 to-cyan-500/20"
+    },
+    {
+      title: "Team Members",
+      value: "200+",
+      icon: <Users className="w-6 h-6" />,
+      description: "Expert Professionals",
+      color: "from-emerald-500/20 to-green-500/20"
+    },
+    {
+      title: "Industries Served",
+      value: "20+",
+      icon: <Building2 className="w-6 h-6" />,
+      description: "Diverse Expertise",
       color: "from-purple-500/20 to-pink-500/20"
-    },
-    {
-      title: "Data Analytics",
-      icon: <BarChart className="w-6 h-6" />,
-      description: "Insights & Intelligence",
-      color: "from-pink-500/20 to-orange-500/20"
-    },
-    {
-      title: "Security",
-      icon: <Shield className="w-6 h-6" />,
-      description: "Protected Systems",
-      color: "from-orange-500/20 to-yellow-500/20"
     }
   ];
 
@@ -97,7 +101,7 @@ export const Hero = () => {
             </motion.div>
           </motion.div>
 
-          {/* Right Column */}
+          {/* Right Column - Stats */}
           <motion.div 
             initial={{ opacity: 0, x: 50 }}
             animate={{ opacity: 1, x: 0 }}
@@ -105,9 +109,9 @@ export const Hero = () => {
             className="lg:w-1/2"
           >
             <div className="relative">
-              <div className="absolute inset-0 bg-gradient-to-br from-blue-500/20 to-purple-500/20 rounded-3xl filter blur-3xl" />
+              <div className="absolute inset-0 bg-gradient-to-br from-blue-500/10 to-purple-500/10 rounded-3xl filter blur-3xl" />
               <div className="relative grid grid-cols-2 gap-4 p-4">
-                {features.map((feature, i) => (
+                {stats.map((stat, i) => (
                   <motion.div
                     key={i}
                     initial={{ opacity: 0, scale: 0.8 }}
@@ -115,13 +119,16 @@ export const Hero = () => {
                     transition={{ duration: 0.5, delay: i * 0.1 }}
                     className="group relative overflow-hidden rounded-2xl bg-white/80 backdrop-blur-sm border border-gray-200/50 shadow-lg hover:shadow-xl transition-all duration-300"
                   >
-                    <div className="absolute inset-0 bg-gradient-to-br opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                    <div className={`absolute inset-0 bg-gradient-to-br ${stat.color} opacity-0 group-hover:opacity-100 transition-opacity duration-300`} />
                     <div className="relative p-6 flex flex-col items-center text-center space-y-4">
                       <div className="p-3 rounded-full bg-gradient-to-br from-purple-500/10 to-blue-500/10">
-                        {feature.icon}
+                        {stat.icon}
                       </div>
-                      <h3 className="text-lg font-semibold text-gray-900">{feature.title}</h3>
-                      <p className="text-sm text-gray-600">{feature.description}</p>
+                      <div>
+                        <div className="text-3xl font-bold text-gray-900">{stat.value}</div>
+                        <h3 className="text-lg font-semibold text-gray-900">{stat.title}</h3>
+                      </div>
+                      <p className="text-sm text-gray-600">{stat.description}</p>
                     </div>
                   </motion.div>
                 ))}
