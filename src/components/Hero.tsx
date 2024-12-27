@@ -83,17 +83,17 @@ export const Hero = () => {
             
             <motion.h1 
               variants={itemVariants}
-              className="text-4xl md:text-5xl font-bold leading-tight bg-gradient-to-r from-gray-900 via-purple-900 to-violet-900 bg-clip-text text-transparent"
+              className="text-3xl md:text-4xl font-bold leading-tight bg-gradient-to-r from-gray-900 via-purple-900 to-violet-900 bg-clip-text text-transparent"
             >
-              <span className="inline-block hover:text-blue-600 transition-colors transform hover:scale-110 duration-300">A</span>
+              <span className="inline-block hover:text-blue-600 transition-all transform hover:scale-125 duration-300 animate-pulse">A</span>
               <span className="inline-block hover:text-blue-600 transition-colors">dvancing </span>
-              <span className="inline-block hover:text-blue-600 transition-colors transform hover:scale-110 duration-300">V</span>
+              <span className="inline-block hover:text-blue-600 transition-all transform hover:scale-125 duration-300 animate-pulse">V</span>
               <span className="inline-block hover:text-blue-600 transition-colors">aluable </span>
-              <span className="inline-block hover:text-blue-600 transition-colors transform hover:scale-110 duration-300">E</span>
+              <span className="inline-block hover:text-blue-600 transition-all transform hover:scale-125 duration-300 animate-pulse">E</span>
               <span className="inline-block hover:text-blue-600 transition-colors">xpertise in </span>
-              <span className="inline-block hover:text-blue-600 transition-colors transform hover:scale-110 duration-300">G</span>
+              <span className="inline-block hover:text-blue-600 transition-all transform hover:scale-125 duration-300 animate-pulse">G</span>
               <span className="inline-block hover:text-blue-600 transition-colors">lobal </span>
-              <span className="inline-block hover:text-blue-600 transition-colors transform hover:scale-110 duration-300">A</span>
+              <span className="inline-block hover:text-blue-600 transition-all transform hover:scale-125 duration-300 animate-pulse">A</span>
               <span className="inline-block hover:text-blue-600 transition-colors">pplications</span>
             </motion.h1>
             
