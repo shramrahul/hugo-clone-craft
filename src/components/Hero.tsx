@@ -69,7 +69,6 @@ export const Hero = () => {
       
       <div className="container mx-auto px-4">
         <div className="flex flex-col lg:flex-row items-center gap-12 max-w-7xl mx-auto">
-          {/* Left Column */}
           <motion.div
             initial="hidden"
             animate="visible"
@@ -101,7 +100,6 @@ export const Hero = () => {
             </motion.div>
           </motion.div>
 
-          {/* Right Column - Stats */}
           <motion.div 
             initial={{ opacity: 0, x: 50 }}
             animate={{ opacity: 1, x: 0 }}
