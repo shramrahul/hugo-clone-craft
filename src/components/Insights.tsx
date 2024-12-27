@@ -38,7 +38,7 @@ export const Insights = () => {
         <h2 className="text-4xl font-bold mb-8 text-gray-900 text-center">Insights</h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {insights.map((insight, index) => (
-            <div key={index} className="group">
+            <div key={index} className="group flex flex-col h-full">
               <div className="overflow-hidden rounded-lg mb-6">
                 <img
                   src={insight.image}
@@ -46,23 +46,25 @@ export const Insights = () => {
                   className="w-full h-[200px] object-cover transition-transform duration-500 group-hover:scale-105"
                 />
               </div>
-              <h3 className="text-2xl font-bold mb-3">{insight.title}</h3>
-              <p className="text-base text-gray-600 mb-4 leading-relaxed">{insight.description}</p>
-              {insight.link.startsWith('#') ? (
-                <a
-                  href={insight.link}
-                  className="inline-flex items-center text-blue-600 hover:text-blue-700 text-base font-medium"
-                >
-                  Learn More <ArrowRight className="ml-2 h-4 w-4" />
-                </a>
-              ) : (
-                <button
-                  onClick={() => handleNavigation(insight.link)}
-                  className="inline-flex items-center text-blue-600 hover:text-blue-700 text-base font-medium"
-                >
-                  Learn More <ArrowRight className="ml-2 h-4 w-4" />
-                </button>
-              )}
+              <div className="flex flex-col flex-grow">
+                <h3 className="text-2xl font-bold mb-3 min-h-[4rem]">{insight.title}</h3>
+                <p className="text-base text-gray-600 mb-4 flex-grow">{insight.description}</p>
+                {insight.link.startsWith('#') ? (
+                  <a
+                    href={insight.link}
+                    className="inline-flex items-center text-blue-600 hover:text-blue-700 text-base font-medium mt-auto"
+                  >
+                    Learn More <ArrowRight className="ml-2 h-4 w-4" />
+                  </a>
+                ) : (
+                  <button
+                    onClick={() => handleNavigation(insight.link)}
+                    className="inline-flex items-center text-blue-600 hover:text-blue-700 text-base font-medium mt-auto"
+                  >
+                    Learn More <ArrowRight className="ml-2 h-4 w-4" />
+                  </button>
+                )}
+              </div>
             </div>
           ))}
         </div>
