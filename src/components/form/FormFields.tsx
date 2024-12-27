@@ -4,13 +4,13 @@ import { Textarea } from "@/components/ui/textarea";
 
 export const FormFields = () => {
   return (
-    <div className="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-6 max-h-[70vh] overflow-y-auto px-2">
+    <div className="grid grid-cols-1 md:grid-cols-2 gap-x-6 gap-y-4 max-h-[60vh] overflow-y-auto px-2">
       <div className="space-y-2">
         <label className="text-sm font-medium text-[#1A1F2C]">* First Name</label>
         <Input 
           required 
           placeholder="John"
-          className="bg-white/80 border-[#D6BCFA]/30 rounded-xl h-12 text-base focus:border-[#9b87f5] focus:ring-[#9b87f5]/20" 
+          className="bg-white/90 border-[#D3E4FD] rounded-xl h-12 text-base focus:border-[#2563EB] focus:ring-[#2563EB]/20" 
         />
       </div>
       
@@ -19,7 +19,7 @@ export const FormFields = () => {
         <Input 
           required 
           placeholder="Doe"
-          className="bg-white/80 border-[#D6BCFA]/30 rounded-xl h-12 text-base focus:border-[#9b87f5] focus:ring-[#9b87f5]/20" 
+          className="bg-white/90 border-[#D3E4FD] rounded-xl h-12 text-base focus:border-[#2563EB] focus:ring-[#2563EB]/20" 
         />
       </div>
       
@@ -28,7 +28,7 @@ export const FormFields = () => {
         <Input 
           required 
           placeholder="Your Company"
-          className="bg-white/80 border-[#D6BCFA]/30 rounded-xl h-12 text-base focus:border-[#9b87f5] focus:ring-[#9b87f5]/20" 
+          className="bg-white/90 border-[#D3E4FD] rounded-xl h-12 text-base focus:border-[#2563EB] focus:ring-[#2563EB]/20" 
         />
       </div>
       
@@ -37,7 +37,7 @@ export const FormFields = () => {
         <Input 
           type="tel" 
           placeholder="+1 (555) 000-0000"
-          className="bg-white/80 border-[#D6BCFA]/30 rounded-xl h-12 text-base focus:border-[#9b87f5] focus:ring-[#9b87f5]/20" 
+          className="bg-white/90 border-[#D3E4FD] rounded-xl h-12 text-base focus:border-[#2563EB] focus:ring-[#2563EB]/20" 
         />
       </div>
       
@@ -47,14 +47,14 @@ export const FormFields = () => {
           type="email" 
           required 
           placeholder="john@company.com"
-          className="bg-white/80 border-[#D6BCFA]/30 rounded-xl h-12 text-base focus:border-[#9b87f5] focus:ring-[#9b87f5]/20" 
+          className="bg-white/90 border-[#D3E4FD] rounded-xl h-12 text-base focus:border-[#2563EB] focus:ring-[#2563EB]/20" 
         />
       </div>
       
       <div className="space-y-2 md:col-span-2">
         <label className="text-sm font-medium text-[#1A1F2C]">* What services are you looking for?</label>
         <Select>
-          <SelectTrigger className="bg-white/80 border-[#D6BCFA]/30 rounded-xl h-12 text-base focus:border-[#9b87f5] focus:ring-[#9b87f5]/20">
+          <SelectTrigger className="bg-white/90 border-[#D3E4FD] rounded-xl h-12 text-base focus:border-[#2563EB] focus:ring-[#2563EB]/20">
             <SelectValue placeholder="Choose Services" />
           </SelectTrigger>
           <SelectContent>
@@ -69,7 +69,7 @@ export const FormFields = () => {
       <div className="space-y-2 md:col-span-2">
         <label className="text-sm font-medium text-[#1A1F2C]">* How soon are you looking to get started?</label>
         <Select>
-          <SelectTrigger className="bg-white/80 border-[#D6BCFA]/30 rounded-xl h-12 text-base focus:border-[#9b87f5] focus:ring-[#9b87f5]/20">
+          <SelectTrigger className="bg-white/90 border-[#D3E4FD] rounded-xl h-12 text-base focus:border-[#2563EB] focus:ring-[#2563EB]/20">
             <SelectValue placeholder="Choose One" />
           </SelectTrigger>
           <SelectContent>
@@ -83,7 +83,7 @@ export const FormFields = () => {
       <div className="space-y-2 md:col-span-2">
         <label className="text-sm font-medium text-[#1A1F2C]">* How many team members do you need?</label>
         <Select>
-          <SelectTrigger className="bg-white/80 border-[#D6BCFA]/30 rounded-xl h-12 text-base focus:border-[#9b87f5] focus:ring-[#9b87f5]/20">
+          <SelectTrigger className="bg-white/90 border-[#D3E4FD] rounded-xl h-12 text-base focus:border-[#2563EB] focus:ring-[#2563EB]/20">
             <SelectValue placeholder="Choose One" />
           </SelectTrigger>
           <SelectContent>
@@ -99,7 +99,7 @@ export const FormFields = () => {
         <label className="text-sm font-medium text-[#1A1F2C]">Additional Information</label>
         <Textarea 
           placeholder="Tell us more about your project requirements..." 
-          className="min-h-[120px] bg-white/80 border-[#D6BCFA]/30 rounded-xl text-base p-4 resize-none focus:border-[#9b87f5] focus:ring-[#9b87f5]/20" 
+          className="min-h-[100px] bg-white/90 border-[#D3E4FD] rounded-xl text-base p-4 resize-none focus:border-[#2563EB] focus:ring-[#2563EB]/20" 
         />
       </div>
     </div>
