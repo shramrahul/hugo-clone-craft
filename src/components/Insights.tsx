@@ -1,5 +1,5 @@
 import { ArrowRight } from "lucide-react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const insights = [
   {
@@ -23,6 +23,15 @@ const insights = [
 ];
 
 export const Insights = () => {
+  const navigate = useNavigate();
+
+  const handleNavigation = (link: string) => {
+    if (!link.startsWith('#')) {
+      window.scrollTo(0, 0);
+      navigate(link);
+    }
+  };
+
   return (
     <section id="insights" className="py-12 bg-white">
       <div className="container mx-auto px-4">
@@ -47,12 +56,12 @@ export const Insights = () => {
                   Learn More <ArrowRight className="ml-2 h-4 w-4" />
                 </a>
               ) : (
-                <Link
-                  to={insight.link}
+                <button
+                  onClick={() => handleNavigation(insight.link)}
                   className="inline-flex items-center text-blue-600 hover:text-blue-700 text-base font-medium"
                 >
                   Learn More <ArrowRight className="ml-2 h-4 w-4" />
-                </Link>
+                </button>
               )}
             </div>
           ))}
