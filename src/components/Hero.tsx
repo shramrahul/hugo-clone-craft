@@ -41,75 +41,73 @@ export const Hero = () => {
           initial="hidden"
           animate="visible"
           variants={containerVariants}
-          className="flex flex-col md:flex-row items-center justify-between gap-8"
+          className="max-w-3xl mx-auto space-y-8"
         >
-          <div className="max-w-xl space-y-6">
-            <motion.div variants={itemVariants}>
-              <span className="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-gradient-to-r from-purple-500 to-blue-500 text-white">
-                Leading IT Consulting Solutions <ArrowRight className="ml-2 w-3 h-3" />
-              </span>
-            </motion.div>
-            
-            <motion.h1 
-              variants={itemVariants}
-              className="text-xl md:text-2xl font-bold leading-tight tracking-wide"
-            >
-              <motion.span 
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: 0.2 }}
-                className="inline-block text-blue-600 font-black mr-1 hover:scale-110 transition-transform duration-300"
-              >
-                A
-              </motion.span>
-              <span className="inline-block text-gray-700 mr-1">dvancing</span>
-              <motion.span 
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: 0.4 }}
-                className="inline-block text-blue-600 font-black mr-1 hover:scale-110 transition-transform duration-300"
-              >
-                V
-              </motion.span>
-              <span className="inline-block text-gray-700 mr-1">aluable</span>
-              <motion.span 
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: 0.6 }}
-                className="inline-block text-blue-600 font-black mr-1 hover:scale-110 transition-transform duration-300"
-              >
-                E
-              </motion.span>
-              <span className="inline-block text-gray-700 mr-1">xpertise in</span>
-              <motion.span 
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: 0.8 }}
-                className="inline-block text-blue-600 font-black mr-1 hover:scale-110 transition-transform duration-300"
-              >
-                G
-              </motion.span>
-              <span className="inline-block text-gray-700 mr-1">lobal</span>
-              <motion.span 
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: 1.0 }}
-                className="inline-block text-blue-600 font-black mr-1 hover:scale-110 transition-transform duration-300"
-              >
-                A
-              </motion.span>
-              <span className="inline-block text-gray-700">pplications</span>
-            </motion.h1>
-            
-            <motion.p 
-              variants={itemVariants}
-              className="text-sm md:text-base text-gray-600 leading-relaxed"
-            >
-              Partner with us to unlock your digital potential. We deliver innovative solutions that drive growth and efficiency in the modern business landscape.
-            </motion.p>
-          </div>
+          <motion.div variants={itemVariants}>
+            <span className="inline-flex items-center px-4 py-1.5 rounded-full text-sm font-medium bg-gradient-to-r from-purple-500 to-blue-500 text-white">
+              Leading IT Consulting Solutions <ArrowRight className="ml-2 w-4 h-4" />
+            </span>
+          </motion.div>
           
-          <motion.div variants={itemVariants} className="w-full md:w-auto">
+          <motion.h1 
+            variants={itemVariants}
+            className="text-2xl md:text-3xl font-bold leading-tight tracking-wide"
+          >
+            <motion.span 
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.2 }}
+              className="inline-block text-blue-600 font-black mr-2 hover:scale-110 transition-transform duration-300"
+            >
+              A
+            </motion.span>
+            <span className="inline-block text-gray-700 mr-2">dvancing</span>
+            <motion.span 
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.4 }}
+              className="inline-block text-blue-600 font-black mr-2 hover:scale-110 transition-transform duration-300"
+            >
+              V
+            </motion.span>
+            <span className="inline-block text-gray-700 mr-2">aluable</span>
+            <motion.span 
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.6 }}
+              className="inline-block text-blue-600 font-black mr-2 hover:scale-110 transition-transform duration-300"
+            >
+              E
+            </motion.span>
+            <span className="inline-block text-gray-700 mr-2">xpertise in</span>
+            <motion.span 
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.8 }}
+              className="inline-block text-blue-600 font-black mr-2 hover:scale-110 transition-transform duration-300"
+            >
+              G
+            </motion.span>
+            <span className="inline-block text-gray-700 mr-2">lobal</span>
+            <motion.span 
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 1.0 }}
+              className="inline-block text-blue-600 font-black mr-2 hover:scale-110 transition-transform duration-300"
+            >
+              A
+            </motion.span>
+            <span className="inline-block text-gray-700">pplications</span>
+          </motion.h1>
+          
+          <motion.p 
+            variants={itemVariants}
+            className="text-lg md:text-xl text-gray-600 leading-relaxed"
+          >
+            Partner with us to unlock your digital potential. We deliver innovative solutions that drive growth and efficiency in the modern business landscape.
+          </motion.p>
+          
+          <motion.div variants={itemVariants} className="pt-4">
             <GetStartedForm />
           </motion.div>
         </motion.div>
