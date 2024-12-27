@@ -6,69 +6,70 @@ export const FormFields = () => {
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-6 max-h-[70vh] overflow-y-auto px-2">
       <div className="space-y-2">
-        <label className="text-base font-medium">* First Name</label>
+        <label className="text-sm font-medium text-[#1A1F2C]">* First Name</label>
         <Input 
           required 
           placeholder="John"
-          className="bg-white border-0 rounded-2xl h-12 text-base" 
+          className="bg-white/80 border-[#D6BCFA]/30 rounded-xl h-12 text-base focus:border-[#9b87f5] focus:ring-[#9b87f5]/20" 
         />
       </div>
       
       <div className="space-y-2">
-        <label className="text-base font-medium">* Last Name</label>
+        <label className="text-sm font-medium text-[#1A1F2C]">* Last Name</label>
         <Input 
           required 
           placeholder="Doe"
-          className="bg-white border-0 rounded-2xl h-12 text-base" 
+          className="bg-white/80 border-[#D6BCFA]/30 rounded-xl h-12 text-base focus:border-[#9b87f5] focus:ring-[#9b87f5]/20" 
         />
       </div>
       
       <div className="space-y-2 md:col-span-2">
-        <label className="text-base font-medium">* Company Name</label>
+        <label className="text-sm font-medium text-[#1A1F2C]">* Company Name</label>
         <Input 
           required 
           placeholder="Your Company"
-          className="bg-white border-0 rounded-2xl h-12 text-base" 
+          className="bg-white/80 border-[#D6BCFA]/30 rounded-xl h-12 text-base focus:border-[#9b87f5] focus:ring-[#9b87f5]/20" 
         />
       </div>
       
       <div className="space-y-2 md:col-span-2">
-        <label className="text-base font-medium">Business Phone</label>
+        <label className="text-sm font-medium text-[#1A1F2C]">Business Phone</label>
         <Input 
           type="tel" 
           placeholder="+1 (555) 000-0000"
-          className="bg-white border-0 rounded-2xl h-12 text-base" 
+          className="bg-white/80 border-[#D6BCFA]/30 rounded-xl h-12 text-base focus:border-[#9b87f5] focus:ring-[#9b87f5]/20" 
         />
       </div>
       
       <div className="space-y-2 md:col-span-2">
-        <label className="text-base font-medium">* Business Email</label>
+        <label className="text-sm font-medium text-[#1A1F2C]">* Business Email</label>
         <Input 
           type="email" 
           required 
           placeholder="john@company.com"
-          className="bg-white border-0 rounded-2xl h-12 text-base" 
+          className="bg-white/80 border-[#D6BCFA]/30 rounded-xl h-12 text-base focus:border-[#9b87f5] focus:ring-[#9b87f5]/20" 
         />
       </div>
       
       <div className="space-y-2 md:col-span-2">
-        <label className="text-base font-medium">* What services are you looking for?</label>
+        <label className="text-sm font-medium text-[#1A1F2C]">* What services are you looking for?</label>
         <Select>
-          <SelectTrigger className="bg-white border-0 rounded-2xl h-12 text-base">
+          <SelectTrigger className="bg-white/80 border-[#D6BCFA]/30 rounded-xl h-12 text-base focus:border-[#9b87f5] focus:ring-[#9b87f5]/20">
             <SelectValue placeholder="Choose Services" />
           </SelectTrigger>
           <SelectContent>
-            <SelectItem value="customer-support">Customer Support</SelectItem>
-            <SelectItem value="content">Content</SelectItem>
-            <SelectItem value="digital-operations">Digital Operations</SelectItem>
+            <SelectItem value="software-development">Software Development</SelectItem>
+            <SelectItem value="cloud-services">Cloud Services</SelectItem>
+            <SelectItem value="data-analytics">Data Analytics</SelectItem>
+            <SelectItem value="security">Security Solutions</SelectItem>
           </SelectContent>
         </Select>
       </div>
       
       <div className="space-y-2 md:col-span-2">
-        <label className="text-base font-medium">* How soon are you looking to get started?</label>
+        <label className="text-sm font-medium text-[#1A1F2C]">* How soon are you looking to get started?</label>
         <Select>
-          <SelectTrigger className="bg-white border-0 rounded-2xl h-12 text-base">
+          <SelectTrigger className="bg-white/80 border-[#D6BCFA]/30 rounded-xl h-12 text-base focus:border-[#9b87f5] focus:ring-[#9b87f5]/20">
             <SelectValue placeholder="Choose One" />
           </SelectTrigger>
           <SelectContent>
@@ -80,38 +81,25 @@ export const FormFields = () => {
       </div>
       
       <div className="space-y-2 md:col-span-2">
-        <label className="text-base font-medium">* How many new team members do you need?</label>
+        <label className="text-sm font-medium text-[#1A1F2C]">* How many team members do you need?</label>
         <Select>
-          <SelectTrigger className="bg-white border-0 rounded-2xl h-12 text-base">
+          <SelectTrigger className="bg-white/80 border-[#D6BCFA]/30 rounded-xl h-12 text-base focus:border-[#9b87f5] focus:ring-[#9b87f5]/20">
             <SelectValue placeholder="Choose One" />
           </SelectTrigger>
           <SelectContent>
-            <SelectItem value="1-5">1-5</SelectItem>
-            <SelectItem value="6-10">6-10</SelectItem>
-            <SelectItem value="11+">11+</SelectItem>
+            <SelectItem value="1-5">1-5 members</SelectItem>
+            <SelectItem value="6-10">6-10 members</SelectItem>
+            <SelectItem value="11-20">11-20 members</SelectItem>
+            <SelectItem value="20+">20+ members</SelectItem>
           </SelectContent>
         </Select>
       </div>
       
       <div className="space-y-2 md:col-span-2">
-        <label className="text-base font-medium">* What best describes your journey in outsourcing?</label>
-        <Select>
-          <SelectTrigger className="bg-white border-0 rounded-2xl h-12 text-base">
-            <SelectValue placeholder="Choose One" />
-          </SelectTrigger>
-          <SelectContent>
-            <SelectItem value="first-time">First time outsourcing</SelectItem>
-            <SelectItem value="experienced">Experienced with outsourcing</SelectItem>
-            <SelectItem value="switching">Switching providers</SelectItem>
-          </SelectContent>
-        </Select>
-      </div>
-      
-      <div className="space-y-2 md:col-span-2">
-        <label className="text-base font-medium">Anything else you'd like to share before the meeting?</label>
+        <label className="text-sm font-medium text-[#1A1F2C]">Additional Information</label>
         <Textarea 
-          placeholder="I'm looking to..." 
-          className="min-h-[150px] bg-white border-0 rounded-2xl text-base p-4 resize-none" 
+          placeholder="Tell us more about your project requirements..." 
+          className="min-h-[120px] bg-white/80 border-[#D6BCFA]/30 rounded-xl text-base p-4 resize-none focus:border-[#9b87f5] focus:ring-[#9b87f5]/20" 
         />
       </div>
     </div>

@@ -17,18 +17,18 @@ export const GetStartedForm = () => {
   return (
     <Dialog open={open} onOpenChange={setOpen}>
       <DialogTrigger asChild data-trigger="contact">
-        <Button className="bg-black text-white px-6 py-2 rounded-full hover:bg-gray-800 transition-colors">
+        <Button className="bg-[#8B5CF6] text-white px-8 py-3 rounded-full hover:bg-[#7C3AED] transition-colors duration-300 shadow-lg hover:shadow-xl">
           Let's Connect
         </Button>
       </DialogTrigger>
-      <DialogContent className="sm:max-w-[800px] bg-[#FEF7CD] p-8 rounded-3xl">
+      <DialogContent className="sm:max-w-[800px] bg-gradient-to-br from-[#F1F0FB] to-[#E5DEFF] p-8 rounded-3xl border-2 border-[#D6BCFA]/20 shadow-2xl">
         <FormHeader onClose={() => setOpen(false)} />
-        <form onSubmit={handleSubmit} className="space-y-6">
+        <form onSubmit={handleSubmit} className="space-y-8">
           <FormFields />
           <div className="flex justify-center mt-8">
             <Button 
               type="submit" 
-              className="w-fit bg-black text-white hover:bg-gray-800 rounded-full px-12 py-6 text-lg"
+              className="bg-[#9b87f5] text-white hover:bg-[#7E69AB] rounded-full px-12 py-6 text-lg font-medium transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1"
             >
               Let's Connect
             </Button>
