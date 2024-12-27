@@ -8,7 +8,6 @@ const LaborTrends = () => {
 
   const handleBackToHome = () => {
     navigate('/');
-    // Use setTimeout to ensure navigation completes before scrolling
     setTimeout(() => {
       const insightsSection = document.getElementById('insights');
       if (insightsSection) {
