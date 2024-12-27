@@ -5,9 +5,8 @@ export const About = () => {
     <section id="about" className="py-24 bg-gradient-to-b from-white to-gray-50">
       <div className="container mx-auto px-4">
         <div className="max-w-4xl mx-auto">
-          {/* Main Content */}
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold bg-gradient-to-r from-blue-600 to-violet-500 bg-clip-text text-transparent mb-6">
+            <h2 className="text-4xl font-bold text-gray-900 mb-6">
               About Us
             </h2>
             <p className="text-lg text-gray-600 leading-relaxed">
@@ -17,7 +16,6 @@ export const About = () => {
             </p>
           </div>
 
-          {/* Core Values */}
           <div className="grid md:grid-cols-3 gap-8 mb-16">
             {[
               {
@@ -53,7 +51,6 @@ export const About = () => {
             ))}
           </div>
 
-          {/* Key Stats */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
             {[
               { number: "15+", label: "Years Experience" },
@@ -65,7 +62,7 @@ export const About = () => {
                 key={index} 
                 className="text-center p-4 bg-white rounded-lg shadow-sm"
               >
-                <div className="text-2xl font-bold bg-gradient-to-r from-blue-600 to-violet-500 bg-clip-text text-transparent">
+                <div className="text-2xl font-bold text-gray-900">
                   {stat.number}
                 </div>
                 <p className="text-sm text-gray-600">
