@@ -7,7 +7,7 @@ export const CareersHero = () => {
       <div 
         className="absolute inset-0 z-0 bg-cover bg-center"
         style={{
-          backgroundImage: "url('/lovable-uploads/photo-1605810230434.jpg')",
+          backgroundImage: "url('/lovable-uploads/photo-1519389950473-47ba0277781c')",
           opacity: 0.4
         }}
       ></div>
