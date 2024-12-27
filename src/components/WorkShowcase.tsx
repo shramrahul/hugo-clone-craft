@@ -25,9 +25,9 @@ const sectors = [
 
 export const WorkShowcase = () => {
   return (
-    <section id="expertise" className="py-12 bg-white">
+    <section id="expertise" className="py-12 bg-gradient-to-br from-slate-50 via-purple-50 to-blue-50">
       <div className="container mx-auto px-4">
-        <h2 className="text-4xl font-bold mb-4 text-gray-900 text-center">Our Expertise</h2>
+        <h2 className="text-4xl font-bold mb-4 text-gray-900 text-center bg-gradient-to-r from-gray-900 via-purple-900 to-violet-900 bg-clip-text text-transparent">Our Expertise</h2>
         <p className="text-gray-600 text-center mb-8 max-w-2xl mx-auto">
           We deliver cutting-edge IT consulting services across various sectors, helping businesses transform and thrive in the digital age.
         </p>
@@ -35,7 +35,7 @@ export const WorkShowcase = () => {
           {sectors.map((sector, index) => (
             <div
               key={index}
-              className="group relative overflow-hidden rounded-lg shadow-lg animate-fade-in"
+              className="group relative overflow-hidden rounded-lg shadow-lg animate-fade-in bg-white/80 backdrop-blur-sm hover:shadow-xl transition-all duration-300"
               style={{ animationDelay: `${index * 0.2}s` }}
             >
               <img
@@ -43,7 +43,7 @@ export const WorkShowcase = () => {
                 alt={sector.title}
                 className="w-full h-[300px] object-cover transition-transform duration-500 group-hover:scale-105"
               />
-              <div className="absolute inset-0 bg-black/70 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+              <div className="absolute inset-0 bg-gradient-to-br from-purple-900/70 to-blue-900/70 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
                 <div className="text-white text-center p-6">
                   <h3 className="text-2xl font-bold mb-2">{sector.title}</h3>
                   <p className="text-gray-200">{sector.description}</p>
