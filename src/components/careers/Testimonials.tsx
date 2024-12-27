@@ -3,7 +3,7 @@ import React from "react";
 const testimonials = [
   {
     id: 1,
-    name: "Sarah Johnson",
+    name: "Shreeram Chaulagain",
     role: "Senior Software Engineer",
     content: "Working at Avega has been an incredible journey. The culture of innovation and continuous learning keeps me motivated every day.",
     avatar: "/lovable-uploads/photo-1581091226825-jpg",
@@ -11,7 +11,7 @@ const testimonials = [
   },
   {
     id: 2,
-    name: "Michael Chen",
+    name: "Saroj Lamichhane",
     role: "Product Manager",
     content: "The collaborative environment and opportunities for growth make Avega a truly special place to work.",
     avatar: "/lovable-uploads/photo-1581092795360.jpg",
@@ -19,7 +19,7 @@ const testimonials = [
   },
   {
     id: 3,
-    name: "Emily Rodriguez",
+    name: "Unika Lamichhane",
     role: "UX Designer",
     content: "I love how Avega empowers us to innovate and make a real impact on our clients' success.",
     avatar: "/lovable-uploads/photo-1486312338219.jpg",
