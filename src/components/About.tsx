@@ -2,7 +2,7 @@ import { Heart, Shield, Star } from "lucide-react";
 
 export const About = () => {
   return (
-    <section id="about" className="py-24 bg-gradient-to-b from-white to-gray-50">
+    <section id="about" className="py-16 bg-gradient-to-b from-white to-gray-50">
       <div className="container mx-auto px-4">
         <div className="max-w-4xl mx-auto">
           <div className="text-center mb-16">
