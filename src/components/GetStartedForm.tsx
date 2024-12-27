@@ -21,11 +21,13 @@ export const GetStartedForm = () => {
           Let's Connect
         </Button>
       </DialogTrigger>
-      <DialogContent className="sm:max-w-[800px] max-h-[90vh] overflow-y-auto bg-gradient-to-br from-[#F8FAFC] to-[#D3E4FD] p-6 rounded-3xl border-2 border-[#D3E4FD]/20 shadow-2xl">
+      <DialogContent className="sm:max-w-[800px] h-[90vh] bg-gradient-to-br from-[#F8FAFC] to-[#D3E4FD] rounded-3xl border-2 border-[#D3E4FD]/20 shadow-2xl flex flex-col">
         <FormHeader onClose={() => setOpen(false)} />
-        <form onSubmit={handleSubmit} className="space-y-6">
-          <FormFields />
-          <div className="flex justify-center mt-6 pb-4">
+        <form onSubmit={handleSubmit} className="flex flex-col flex-1 overflow-hidden">
+          <div className="flex-1 overflow-y-auto px-6">
+            <FormFields />
+          </div>
+          <div className="flex justify-center p-6 bg-gradient-to-br from-[#F8FAFC] to-[#D3E4FD] border-t border-[#D3E4FD]/20">
             <Button 
               type="submit" 
               className="bg-[#2563EB] text-white hover:bg-[#1E40AF] rounded-full px-12 py-6 text-lg font-medium transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1"

@@ -17,8 +17,8 @@ export const FormHeader = ({ onClose }: FormHeaderProps) => {
           <span className="sr-only">Close</span>
         </button>
       </div>
-      <DialogHeader>
-        <DialogTitle className="text-3xl font-normal text-center mb-6">
+      <DialogHeader className="bg-gradient-to-br from-[#F8FAFC] to-[#D3E4FD] px-6 py-4 border-b border-[#D3E4FD]/20">
+        <DialogTitle className="text-3xl font-normal text-center">
           <div className="flex flex-col items-center space-y-4">
             <div className="flex gap-3 items-center">
               <div className="w-10 h-10 rounded-full bg-gradient-to-br from-[#2563EB] to-[#1E40AF] shadow-lg"></div>
