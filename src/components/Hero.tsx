@@ -85,12 +85,16 @@ export const Hero = () => {
               variants={itemVariants}
               className="text-4xl md:text-5xl font-bold leading-tight bg-gradient-to-r from-gray-900 via-purple-900 to-violet-900 bg-clip-text text-transparent"
             >
-              <span className="inline-block hover:text-blue-600 transition-colors">Advancing</span>{" "}
-              <span className="inline-block hover:text-blue-600 transition-colors">Valuable</span>{" "}
-              <span className="inline-block hover:text-blue-600 transition-colors">Expertise</span>{" "}
-              <span className="inline-block hover:text-blue-600 transition-colors">in</span>{" "}
-              <span className="inline-block hover:text-blue-600 transition-colors">Global</span>{" "}
-              <span className="inline-block hover:text-blue-600 transition-colors">Applications</span>
+              <span className="inline-block hover:text-blue-600 transition-colors transform hover:scale-110 duration-300">A</span>
+              <span className="inline-block hover:text-blue-600 transition-colors">dvancing </span>
+              <span className="inline-block hover:text-blue-600 transition-colors transform hover:scale-110 duration-300">V</span>
+              <span className="inline-block hover:text-blue-600 transition-colors">aluable </span>
+              <span className="inline-block hover:text-blue-600 transition-colors transform hover:scale-110 duration-300">E</span>
+              <span className="inline-block hover:text-blue-600 transition-colors">xpertise in </span>
+              <span className="inline-block hover:text-blue-600 transition-colors transform hover:scale-110 duration-300">G</span>
+              <span className="inline-block hover:text-blue-600 transition-colors">lobal </span>
+              <span className="inline-block hover:text-blue-600 transition-colors transform hover:scale-110 duration-300">A</span>
+              <span className="inline-block hover:text-blue-600 transition-colors">pplications</span>
             </motion.h1>
             
             <motion.p 
