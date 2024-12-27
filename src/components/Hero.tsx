@@ -15,22 +15,7 @@ export const Hero = () => {
           </div>
           
           <h1 className="text-2xl md:text-3xl font-bold leading-tight tracking-wide">
-            <span className="inline-block text-blue-600 font-black mr-2 hover:scale-110 transition-transform duration-300">
-              T
-            </span>
-            <span className="inline-block text-gray-700 mr-2">ransforming</span>
-            <span className="inline-block text-blue-600 font-black mr-2 hover:scale-110 transition-transform duration-300">
-              B
-            </span>
-            <span className="inline-block text-gray-700 mr-2">usiness with</span>
-            <span className="inline-block text-blue-600 font-black mr-2 hover:scale-110 transition-transform duration-300">
-              T
-            </span>
-            <span className="inline-block text-gray-700 mr-2">echnology</span>
-            <span className="inline-block text-blue-600 font-black mr-2 hover:scale-110 transition-transform duration-300">
-              E
-            </span>
-            <span className="inline-block text-gray-700">xcellence</span>
+            <span className="text-gray-700">Transforming Business with Technology Excellence</span>
           </h1>
           
           <p className="text-lg md:text-xl text-gray-600 leading-relaxed">
