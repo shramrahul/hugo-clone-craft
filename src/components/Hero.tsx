@@ -31,8 +31,31 @@ export const Hero = () => {
     }
   };
 
+  const features = [
+    {
+      title: "Software Development",
+      image: "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?auto=format&fit=crop&q=80",
+      description: "Custom Solutions"
+    },
+    {
+      title: "Cloud Services",
+      image: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&q=80",
+      description: "Scalable Infrastructure"
+    },
+    {
+      title: "Data Analytics",
+      image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80",
+      description: "Insights & Intelligence"
+    },
+    {
+      title: "Security",
+      image: "https://images.unsplash.com/photo-1555949963-aa79dcee981c?auto=format&fit=crop&q=80",
+      description: "Protected Systems"
+    }
+  ];
+
   return (
-    <div className="relative py-8 bg-gradient-to-br from-white via-gray-50 to-blue-50">
+    <div className="relative py-12 bg-gradient-to-br from-white via-gray-50 to-blue-50">
       <div className="absolute inset-0 bg-grid-pattern opacity-[0.02] pointer-events-none" />
       <div className="container mx-auto px-4">
         <div className="flex flex-col lg:flex-row items-center gap-8 max-w-6xl mx-auto">
@@ -79,21 +102,23 @@ export const Hero = () => {
             <div className="relative">
               <div className="absolute inset-0 bg-gradient-to-br from-blue-500/20 to-purple-500/20 rounded-2xl filter blur-2xl" />
               <div className="relative grid grid-cols-2 gap-3 p-4">
-                {[1, 2, 3, 4].map((_, i) => (
+                {features.map((feature, i) => (
                   <motion.div
                     key={i}
                     initial={{ opacity: 0, scale: 0.8 }}
                     animate={{ opacity: 1, scale: 1 }}
                     transition={{ duration: 0.5, delay: i * 0.1 }}
-                    className={`aspect-square rounded-xl ${
-                      i % 2 === 0 ? 'bg-blue-500/10' : 'bg-purple-500/10'
-                    } p-4 flex items-center justify-center transform hover:scale-105 transition-transform duration-300`}
+                    className="group relative overflow-hidden rounded-xl aspect-square"
                   >
                     <img 
-                      src={`https://images.unsplash.com/photo-${1580000000000 + i}`} 
-                      alt={`Technology ${i + 1}`}
-                      className="w-full h-full object-cover rounded-lg"
+                      src={feature.image}
+                      alt={feature.title}
+                      className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
                     />
+                    <div className="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col items-center justify-center text-white p-4">
+                      <h3 className="text-lg font-semibold mb-2">{feature.title}</h3>
+                      <p className="text-sm text-center">{feature.description}</p>
+                    </div>
                   </motion.div>
                 ))}
               </div>
