@@ -10,7 +10,7 @@ export const Hero = () => {
         <div className="max-w-4xl mx-auto space-y-8">
           <div>
             <span className="inline-flex items-center px-4 py-1.5 rounded-full text-sm font-medium bg-gradient-to-r from-purple-500 to-blue-500 text-white">
-              Advanced Vision Engineering and Global Analytics <ArrowRight className="ml-2 w-4 h-4" />
+              Transforming Business with Technology Excellence <ArrowRight className="ml-2 w-4 h-4" />
             </span>
           </div>
           
