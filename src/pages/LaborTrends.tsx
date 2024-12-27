@@ -23,10 +23,10 @@ const LaborTrends = () => {
       <main className="container mx-auto px-4 py-12">
         <button 
           onClick={handleBackToHome}
-          className="inline-flex items-center text-blue-600 hover:text-blue-700 mb-8"
+          className="group inline-flex items-center gap-2 px-4 py-2 mb-8 text-sm font-medium transition-colors rounded-lg hover:bg-[#E5DEFF] text-[#8B5CF6]"
         >
-          <ArrowLeft className="mr-2 h-4 w-4" />
-          Back to Home
+          <ArrowLeft className="w-4 h-4 transition-transform group-hover:-translate-x-1" />
+          Back to Insights
         </button>
 
         <div className="max-w-4xl mx-auto">
