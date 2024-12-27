@@ -10,7 +10,14 @@ export const About = () => {
               About Us
             </h2>
             <p className="text-lg text-gray-600 leading-relaxed">
-              At Avega Solutions, we are committed to <span className="font-semibold">A</span>dvancing <span className="font-semibold">V</span>aluable <span className="font-semibold">E</span>xpertise in <span className="font-semibold">G</span>lobal <span className="font-semibold">A</span>pplications. Our IT consulting services help businesses enhance efficiency, integrate innovative technologies, and drive growth. With a customer-first approach, we provide tailored solutions to meet your unique needs and solve complex challenges.
+              At Avega Solutions, we are committed to{" "}
+              <span className="font-semibold animate-pulse hover:text-blue-600 transition-colors cursor-default">A</span>dvancing{" "}
+              <span className="font-semibold animate-pulse hover:text-blue-600 transition-colors cursor-default">V</span>aluable{" "}
+              <span className="font-semibold animate-pulse hover:text-blue-600 transition-colors cursor-default">E</span>xpertise in{" "}
+              <span className="font-semibold animate-pulse hover:text-blue-600 transition-colors cursor-default">G</span>lobal{" "}
+              <span className="font-semibold animate-pulse hover:text-blue-600 transition-colors cursor-default">A</span>pplications.
+              Our IT consulting services help businesses enhance efficiency, integrate innovative technologies, and drive growth. 
+              With a customer-first approach, we provide tailored solutions to meet your unique needs and solve complex challenges.
             </p>
           </div>
 
