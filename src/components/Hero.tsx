@@ -37,12 +37,12 @@ export const Hero = () => {
       <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxwYXRoIGQ9Ik0zNiAxOGMzLjMxNCAwIDYgMi42ODYgNiA2cy0yLjY4NiA2LTYgNi02LTIuNjg2LTYtNiAyLjY4Ni02IDYtNiIgc3Ryb2tlPSIjOTk5IiBzdHJva2Utd2lkdGg9IjIiLz48L2c+PC9zdmc+')] opacity-[0.15]" />
       
       <div className="container mx-auto px-4">
-        <div className="flex flex-col lg:flex-row items-center gap-12 max-w-7xl mx-auto">
+        <div className="relative flex flex-col lg:flex-row items-center gap-12 max-w-7xl mx-auto">
           <motion.div
             initial="hidden"
             animate="visible"
             variants={containerVariants}
-            className="lg:w-1/2 space-y-8"
+            className="lg:w-1/2 space-y-8 z-10"
           >
             <motion.div variants={itemVariants}>
               <span className="inline-flex items-center px-4 py-1.5 rounded-full text-sm font-medium bg-gradient-to-r from-purple-500 to-blue-500 text-white">
@@ -52,53 +52,13 @@ export const Hero = () => {
             
             <motion.h1 
               variants={itemVariants}
-              className="text-2xl md:text-3xl font-bold leading-tight tracking-wide"
+              className="text-4xl md:text-5xl font-bold leading-tight tracking-wide flex items-center justify-start space-x-2"
             >
-              <motion.span 
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: 0.2 }}
-                className="inline-block text-blue-600 font-black mr-2 hover:scale-110 transition-transform duration-300"
-              >
-                A
-              </motion.span>
-              <span className="inline-block text-gray-700 mr-2">dvancing</span>
-              <motion.span 
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: 0.4 }}
-                className="inline-block text-blue-600 font-black mr-2 hover:scale-110 transition-transform duration-300"
-              >
-                V
-              </motion.span>
-              <span className="inline-block text-gray-700 mr-2">aluable</span>
-              <motion.span 
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: 0.6 }}
-                className="inline-block text-blue-600 font-black mr-2 hover:scale-110 transition-transform duration-300"
-              >
-                E
-              </motion.span>
-              <span className="inline-block text-gray-700 mr-2">xpertise in</span>
-              <motion.span 
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: 0.8 }}
-                className="inline-block text-blue-600 font-black mr-2 hover:scale-110 transition-transform duration-300"
-              >
-                G
-              </motion.span>
-              <span className="inline-block text-gray-700 mr-2">lobal</span>
-              <motion.span 
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: 1.0 }}
-                className="inline-block text-blue-600 font-black mr-2 hover:scale-110 transition-transform duration-300"
-              >
-                A
-              </motion.span>
-              <span className="inline-block text-gray-700">pplications</span>
+              <span className="text-blue-600 font-black hover:scale-110 transition-transform duration-300">A</span>
+              <span className="text-blue-600 font-black hover:scale-110 transition-transform duration-300">V</span>
+              <span className="text-blue-600 font-black hover:scale-110 transition-transform duration-300">E</span>
+              <span className="text-blue-600 font-black hover:scale-110 transition-transform duration-300">G</span>
+              <span className="text-blue-600 font-black hover:scale-110 transition-transform duration-300">A</span>
             </motion.h1>
             
             <motion.p 
@@ -117,18 +77,18 @@ export const Hero = () => {
             initial={{ opacity: 0, x: 50 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, delay: 0.5 }}
-            className="lg:w-1/2"
+            className="lg:w-1/2 absolute right-0 top-0 h-full lg:relative"
           >
-            <div className="relative">
+            <div className="relative h-full">
               <div className="absolute inset-0 bg-gradient-to-br from-blue-500/10 to-purple-500/10 rounded-3xl filter blur-3xl" />
-              <div className="relative p-8 rounded-3xl bg-white/80 backdrop-blur-sm border border-gray-200/50 shadow-lg">
+              <div className="relative p-8 rounded-3xl bg-white/80 backdrop-blur-sm border border-gray-200/50 shadow-lg h-full">
                 <motion.img
                   initial={{ scale: 0.8, opacity: 0 }}
                   animate={{ scale: 1, opacity: 1 }}
                   transition={{ duration: 0.5 }}
                   src="/placeholder.svg"
                   alt="Technology Innovation"
-                  className="w-full h-auto rounded-2xl shadow-md"
+                  className="w-full h-full object-cover rounded-2xl shadow-md"
                 />
               </div>
             </div>
