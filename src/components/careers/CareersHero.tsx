@@ -13,7 +13,7 @@ export const CareersHero = () => {
       ></div>
       <div className="container mx-auto px-4 relative z-20">
         <div className="max-w-3xl">
-          <h1 className="text-4xl md:text-5xl font-bold mb-6 animate-fade-up">
+          <h1 className="text-4xl md:text-5xl font-bold mb-6 animate-fade-up font-sans tracking-wide leading-tight">
             Join Our Team of Innovators
           </h1>
           <p className="text-xl mb-8 animate-fade-up" style={{ animationDelay: "0.2s" }}>

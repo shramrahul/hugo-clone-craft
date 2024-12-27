@@ -6,7 +6,7 @@ const testimonials = [
     name: "Sarah Johnson",
     role: "Senior Software Engineer",
     content: "Working at Avega has been an incredible journey. The culture of innovation and continuous learning keeps me motivated every day.",
-    avatar: "/lovable-uploads/photo-1581091226825.jpg",
+    avatar: "/lovable-uploads/photo-1581091226825-jpg",
     image: "/lovable-uploads/photo-1581092795360.jpg"
   },
   {
@@ -28,36 +28,49 @@ const testimonials = [
 ];
 
 export const Testimonials = () => {
+  console.log("Rendering testimonials with images:", testimonials.map(t => t.image));
+  
   return (
     <section className="py-16 bg-gray-50">
       <div className="container mx-auto px-4">
         <h2 className="text-3xl font-bold text-center mb-12">What Our Team Says</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {testimonials.map((testimonial) => (
-            <div key={testimonial.id} className="bg-white rounded-lg shadow-sm border overflow-hidden animate-fade-up">
-              <div className="h-48 overflow-hidden">
-                <img
-                  src={testimonial.image}
-                  alt="Work environment"
-                  className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
-                />
-              </div>
-              <div className="p-6">
-                <div className="flex items-center mb-4">
+          {testimonials.map((testimonial) => {
+            console.log("Rendering testimonial card with image:", testimonial.image);
+            return (
+              <div key={testimonial.id} className="bg-white rounded-lg shadow-sm border overflow-hidden animate-fade-up">
+                <div className="h-48 overflow-hidden">
                   <img
-                    src={testimonial.avatar}
-                    alt={testimonial.name}
-                    className="w-12 h-12 rounded-full object-cover mr-4"
+                    src={testimonial.image}
+                    alt="Work environment"
+                    className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+                    onError={(e) => {
+                      console.error("Error loading image:", testimonial.image);
+                      e.currentTarget.src = "/placeholder.svg";
+                    }}
                   />
-                  <div>
-                    <h3 className="font-semibold">{testimonial.name}</h3>
-                    <p className="text-sm text-gray-600">{testimonial.role}</p>
-                  </div>
                 </div>
-                <p className="text-gray-700">{testimonial.content}</p>
+                <div className="p-6">
+                  <div className="flex items-center mb-4">
+                    <img
+                      src={testimonial.avatar}
+                      alt={testimonial.name}
+                      className="w-12 h-12 rounded-full object-cover mr-4"
+                      onError={(e) => {
+                        console.error("Error loading avatar:", testimonial.avatar);
+                        e.currentTarget.src = "/placeholder.svg";
+                      }}
+                    />
+                    <div>
+                      <h3 className="font-semibold">{testimonial.name}</h3>
+                      <p className="text-sm text-gray-600">{testimonial.role}</p>
+                    </div>
+                  </div>
+                  <p className="text-gray-700">{testimonial.content}</p>
+                </div>
               </div>
-            </div>
-          ))}
+            );
+          })}
         </div>
       </div>
     </section>
