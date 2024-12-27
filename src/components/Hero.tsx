@@ -30,7 +30,6 @@ export const Hero = () => {
             ))}
           </div>
           
-          {/* Profile images with improved positioning */}
           <div className="absolute top-1/4 right-1/4 transform hover:scale-110 transition-transform duration-300">
             <img 
               src="https://images.unsplash.com/photo-1535268647677-300dbf3d78d1" 
@@ -48,13 +47,13 @@ export const Hero = () => {
           </div>
         </div>
         <div className="lg:w-1/2 space-y-6 mt-24 lg:mt-0 lg:pl-12">
-          <div className="inline-block px-4 py-2 bg-gray-100 rounded-full text-base">
+          <div className="inline-block px-4 py-2 bg-gray-100 rounded-full text-sm font-medium text-gray-600">
             Transform Your Business
           </div>
-          <h1 className="text-5xl font-bold leading-tight">
+          <h1 className="text-4xl md:text-5xl font-bold leading-tight text-gray-900">
             Empowering Innovation Through Expert Solutions
           </h1>
-          <p className="text-lg text-gray-600 max-w-xl">
+          <p className="text-lg md:text-xl text-gray-600 leading-relaxed max-w-xl">
             Partner with us to unlock your business potential. We combine industry expertise with cutting-edge technology to deliver transformative solutions that drive real results.
           </p>
           <GetStartedForm />
@@ -67,8 +66,8 @@ export const Hero = () => {
                 className="w-16 h-16 rounded-lg object-cover" 
               />
               <div>
-                <h3 className="text-xl font-bold mb-2">How Hugo Helped A Leading Innovator Confront Inclusion Gaps</h3>
-                <p className="text-base text-gray-600">
+                <h3 className="text-xl font-semibold text-gray-900 mb-2">How Hugo Helped A Leading Innovator Confront Inclusion Gaps</h3>
+                <p className="text-base text-gray-600 leading-relaxed">
                   Learn how Hugo, by collecting 600,000 tailored photo IDs in just three months, significantly enhanced AI inclusivity through a collaboration with a leading tech innovator, improving visual recognition technology.
                 </p>
                 <div className="mt-4 h-1 bg-gray-200 rounded">
