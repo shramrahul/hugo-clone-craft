@@ -10,9 +10,7 @@ export const About = () => {
               About Us
             </h2>
             <p className="text-lg text-gray-600 leading-relaxed">
-              We are passionate about delivering innovative solutions that transform businesses. 
-              Our commitment to excellence and customer satisfaction drives everything we do, 
-              making us a trusted partner in digital transformation.
+              At Avega Solutions, we are committed to <span className="font-semibold">A</span>dvancing <span className="font-semibold">V</span>aluable <span className="font-semibold">E</span>xpertise in <span className="font-semibold">G</span>lobal <span className="font-semibold">A</span>pplications. Our IT consulting services help businesses enhance efficiency, integrate innovative technologies, and drive growth. With a customer-first approach, we provide tailored solutions to meet your unique needs and solve complex challenges.
             </p>
           </div>
 
