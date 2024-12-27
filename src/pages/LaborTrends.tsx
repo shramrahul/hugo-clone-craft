@@ -1,18 +1,34 @@
 import { Navigation } from "@/components/Navigation";
 import { Footer } from "@/components/Footer";
 import { ArrowLeft } from "lucide-react";
-import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 const LaborTrends = () => {
+  const navigate = useNavigate();
+
+  const handleBackToHome = () => {
+    navigate('/');
+    // Use setTimeout to ensure navigation completes before scrolling
+    setTimeout(() => {
+      const insightsSection = document.getElementById('insights');
+      if (insightsSection) {
+        insightsSection.scrollIntoView({ behavior: 'smooth' });
+      }
+    }, 100);
+  };
+
   return (
     <div className="min-h-screen bg-white">
       <Navigation />
       
       <main className="container mx-auto px-4 py-12">
-        <Link to="/" className="inline-flex items-center text-blue-600 hover:text-blue-700 mb-8">
+        <button 
+          onClick={handleBackToHome}
+          className="inline-flex items-center text-blue-600 hover:text-blue-700 mb-8"
+        >
           <ArrowLeft className="mr-2 h-4 w-4" />
           Back to Home
-        </Link>
+        </button>
 
         <div className="max-w-4xl mx-auto">
           <h1 className="text-5xl font-bold mb-4">Labor and Industry Trends</h1>
