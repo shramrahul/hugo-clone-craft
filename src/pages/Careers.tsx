@@ -1,12 +1,10 @@
+import React, { useState } from "react";
 import { Navigation } from "@/components/Navigation";
 import { Footer } from "@/components/Footer";
-import { Briefcase, MapPin, Clock, Search, DollarSign, Building, Code, Calendar } from "lucide-react";
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { useState } from "react";
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
-import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
-import { Toggle } from "@/components/ui/toggle";
+import { CareersHero } from "@/components/careers/CareersHero";
+import { JobFilters } from "@/components/careers/JobFilters";
+import { JobList } from "@/components/careers/JobList";
+import { Testimonials } from "@/components/careers/Testimonials";
 
 const SALARY_RANGES = [
   { label: "All Salaries", value: "all", min: 0, max: Infinity },
@@ -179,202 +177,43 @@ const Careers = () => {
   });
 
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-gray-50">
       <Navigation />
-      <main className="container mx-auto px-4 py-24">
+      <CareersHero />
+      <main className="container mx-auto px-4 py-12">
         <div className="max-w-6xl mx-auto">
-          <h1 className="text-4xl font-bold mb-8">Join Our Team</h1>
-          <p className="text-gray-600 mb-12">
-            We're always looking for talented individuals to join our team. Check out our current openings below.
-          </p>
-
-          <div className="space-y-6 mb-8">
-            <div className="relative">
-              <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
-              <Input
-                type="text"
-                placeholder="Search for jobs..."
-                value={searchQuery}
-                onChange={(e) => setSearchQuery(e.target.value)}
-                className="pl-10 w-full"
-              />
-            </div>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-              <Select value={selectedLocation} onValueChange={setSelectedLocation}>
-                <SelectTrigger>
-                  <SelectValue placeholder="Select Location" />
-                </SelectTrigger>
-                <SelectContent>
-                  {LOCATIONS.map((location) => (
-                    <SelectItem key={location} value={location}>
-                      {location}
-                    </SelectItem>
-                  ))}
-                </SelectContent>
-              </Select>
-
-              <Select value={selectedType} onValueChange={setSelectedType}>
-                <SelectTrigger>
-                  <SelectValue placeholder="Job Type" />
-                </SelectTrigger>
-                <SelectContent>
-                  {JOB_TYPES.map((type) => (
-                    <SelectItem key={type} value={type}>
-                      {type}
-                    </SelectItem>
-                  ))}
-                </SelectContent>
-              </Select>
-
-              <Select value={selectedExpertise} onValueChange={setSelectedExpertise}>
-                <SelectTrigger>
-                  <SelectValue placeholder="Area of Expertise" />
-                </SelectTrigger>
-                <SelectContent>
-                  {EXPERTISE_AREAS.map((area) => (
-                    <SelectItem key={area} value={area}>
-                      {area}
-                    </SelectItem>
-                  ))}
-                </SelectContent>
-              </Select>
-
-              <Select value={selectedRemote} onValueChange={setSelectedRemote}>
-                <SelectTrigger>
-                  <SelectValue placeholder="Remote Options" />
-                </SelectTrigger>
-                <SelectContent>
-                  {REMOTE_OPTIONS.map((option) => (
-                    <SelectItem key={option} value={option}>
-                      {option}
-                    </SelectItem>
-                  ))}
-                </SelectContent>
-              </Select>
-
-              <Select value={selectedIndustry} onValueChange={setSelectedIndustry}>
-                <SelectTrigger>
-                  <SelectValue placeholder="Industry" />
-                </SelectTrigger>
-                <SelectContent>
-                  {INDUSTRIES.map((industry) => (
-                    <SelectItem key={industry} value={industry}>
-                      {industry}
-                    </SelectItem>
-                  ))}
-                </SelectContent>
-              </Select>
-
-              <Select value={selectedDatePosted} onValueChange={setSelectedDatePosted}>
-                <SelectTrigger>
-                  <SelectValue placeholder="Date Posted" />
-                </SelectTrigger>
-                <SelectContent>
-                  {DATE_POSTED_OPTIONS.map((option) => (
-                    <SelectItem key={option.value} value={option.value}>
-                      {option.label}
-                    </SelectItem>
-                  ))}
-                </SelectContent>
-              </Select>
-            </div>
-
-            <div className="space-y-4">
-              <h3 className="text-lg font-semibold">Job Skills</h3>
-              <div className="flex flex-wrap gap-2">
-                {JOB_SKILLS.map((skill) => (
-                  <Toggle
-                    key={skill}
-                    pressed={selectedSkills.includes(skill)}
-                    onPressedChange={(pressed) => {
-                      setSelectedSkills(prev =>
-                        pressed
-                          ? [...prev, skill]
-                          : prev.filter(s => s !== skill)
-                      );
-                    }}
-                    className="capitalize"
-                  >
-                    {skill}
-                  </Toggle>
-                ))}
-              </div>
-            </div>
-
-            <RadioGroup
-              value={selectedSalaryRange}
-              onValueChange={setSelectedSalaryRange}
-              className="space-y-2 p-2 border rounded-md"
-            >
-              {SALARY_RANGES.map((range) => (
-                <div key={range.value || range.label} className="flex items-center space-x-2">
-                  <RadioGroupItem value={range.value || range.label} id={range.value || range.label} />
-                  <label htmlFor={range.value || range.label} className="text-sm">
-                    {range.label}
-                  </label>
-                </div>
-              ))}
-            </RadioGroup>
-          </div>
-          
-          <div className="space-y-6">
-            {filteredJobs.length === 0 ? (
-              <div className="text-center py-8 text-gray-500">
-                No jobs found matching your search criteria.
-              </div>
-            ) : (
-              filteredJobs.map((job) => (
-                <div
-                  key={job.id}
-                  className="border rounded-lg p-6 hover:shadow-lg transition-shadow bg-white"
-                >
-                  <div className="flex items-start justify-between">
-                    <div>
-                      <h3 className="text-xl font-semibold mb-2">{job.title}</h3>
-                      <div className="flex flex-wrap items-center gap-4 text-gray-600 mb-4">
-                        <div className="flex items-center">
-                          <MapPin className="w-4 h-4 mr-1" />
-                          {job.location}
-                        </div>
-                        <div className="flex items-center">
-                          <Clock className="w-4 h-4 mr-1" />
-                          {job.type}
-                        </div>
-                        <div className="flex items-center">
-                          <DollarSign className="w-4 h-4 mr-1" />
-                          {`${(job.salary / 1000).toFixed(0)}k`}
-                        </div>
-                        <div className="flex items-center">
-                          <Building className="w-4 h-4 mr-1" />
-                          {job.industry}
-                        </div>
-                      </div>
-                      <p className="text-gray-600 mb-4">{job.description}</p>
-                      <div className="flex flex-wrap gap-2">
-                        {job.skills.map((skill) => (
-                          <span
-                            key={skill}
-                            className="px-2 py-1 bg-gray-100 rounded-full text-sm text-gray-600"
-                          >
-                            {skill}
-                          </span>
-                        ))}
-                      </div>
-                    </div>
-                    <Briefcase className="w-6 h-6 text-gray-400" />
-                  </div>
-                  <div className="mt-4">
-                    <Button variant="outline">
-                      Apply Now
-                    </Button>
-                  </div>
-                </div>
-              ))
-            )}
-          </div>
+          <JobFilters
+            searchQuery={searchQuery}
+            setSearchQuery={setSearchQuery}
+            selectedLocation={selectedLocation}
+            setSelectedLocation={setSelectedLocation}
+            selectedType={selectedType}
+            setSelectedType={setSelectedType}
+            selectedExpertise={selectedExpertise}
+            setSelectedExpertise={setSelectedExpertise}
+            selectedRemote={selectedRemote}
+            setSelectedRemote={setSelectedRemote}
+            selectedIndustry={selectedIndustry}
+            setSelectedIndustry={setSelectedIndustry}
+            selectedSkills={selectedSkills}
+            setSelectedSkills={setSelectedSkills}
+            selectedDatePosted={selectedDatePosted}
+            setSelectedDatePosted={setSelectedDatePosted}
+            selectedSalaryRange={selectedSalaryRange}
+            setSelectedSalaryRange={setSelectedSalaryRange}
+            LOCATIONS={LOCATIONS}
+            JOB_TYPES={JOB_TYPES}
+            EXPERTISE_AREAS={EXPERTISE_AREAS}
+            REMOTE_OPTIONS={REMOTE_OPTIONS}
+            INDUSTRIES={INDUSTRIES}
+            JOB_SKILLS={JOB_SKILLS}
+            DATE_POSTED_OPTIONS={DATE_POSTED_OPTIONS}
+            SALARY_RANGES={SALARY_RANGES}
+          />
+          <JobList jobs={filteredJobs} />
         </div>
       </main>
+      <Testimonials />
       <Footer />
     </div>
   );
