@@ -12,7 +12,7 @@ const insights = [
     title: "Avega survey: Quality and security dominate data and analytics concerns",
     description: "Collecting meaningful data and data security are the biggest challenges when it comes to data analytics, according to a recent survey on Avega.com.",
     image: "https://images.unsplash.com/photo-1605810230434-7631ac76ec81",
-    link: "#"
+    link: "/data-survey"
   },
   {
     title: "Labor and Industry Trends Report November 2024",

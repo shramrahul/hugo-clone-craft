@@ -8,6 +8,7 @@ import Index from "./pages/Index";
 import LaborTrends from "./pages/LaborTrends";
 import GenerativeAI from "./pages/GenerativeAI";
 import Careers from "./pages/Careers";
+import DataSurvey from "./pages/DataSurvey";
 
 const queryClient = new QueryClient();
 
@@ -24,6 +25,7 @@ const App = () => {
               <Route path="/labor-trends" element={<LaborTrends />} />
               <Route path="/generative-ai" element={<GenerativeAI />} />
               <Route path="/careers" element={<Careers />} />
+              <Route path="/data-survey" element={<DataSurvey />} />
             </Routes>
           </TooltipProvider>
         </BrowserRouter>
