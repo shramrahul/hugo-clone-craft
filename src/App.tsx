@@ -5,8 +5,6 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { Loader2 } from "lucide-react";
-import { Navigation } from "./components/Navigation";
-import { Footer } from "./components/Footer";
 
 // Lazy load components
 const Index = React.lazy(() => import("./pages/Index"));
@@ -32,21 +30,15 @@ const App = () => {
           <TooltipProvider>
             <Toaster />
             <Sonner />
-            <div className="flex flex-col min-h-screen">
-              <Navigation />
-              <main className="flex-grow">
-                <Suspense fallback={<LoadingSpinner />}>
-                  <Routes>
-                    <Route path="/" element={<Index />} />
-                    <Route path="/labor-trends" element={<LaborTrends />} />
-                    <Route path="/generative-ai" element={<GenerativeAI />} />
-                    <Route path="/careers" element={<Careers />} />
-                    <Route path="/data-survey" element={<DataSurvey />} />
-                  </Routes>
-                </Suspense>
-              </main>
-              <Footer />
-            </div>
+            <Suspense fallback={<LoadingSpinner />}>
+              <Routes>
+                <Route path="/" element={<Index />} />
+                <Route path="/labor-trends" element={<LaborTrends />} />
+                <Route path="/generative-ai" element={<GenerativeAI />} />
+                <Route path="/careers" element={<Careers />} />
+                <Route path="/data-survey" element={<DataSurvey />} />
+              </Routes>
+            </Suspense>
           </TooltipProvider>
         </BrowserRouter>
       </QueryClientProvider>
