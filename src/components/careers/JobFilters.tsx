@@ -63,7 +63,7 @@ export const JobFilters: React.FC<JobFiltersProps> = ({
   SALARY_RANGES,
 }) => {
   return (
-    <div className="space-y-6 mb-8 bg-white p-6 rounded-lg shadow-sm border animate-fade-up">
+    <div className="space-y-4 md:space-y-6 mb-6 md:mb-8 bg-white p-4 md:p-6 rounded-lg shadow-sm border animate-fade-up">
       <div className="relative">
         <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
         <Input
@@ -75,7 +75,7 @@ export const JobFilters: React.FC<JobFiltersProps> = ({
         />
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
         <Select value={selectedLocation} onValueChange={setSelectedLocation}>
           <SelectTrigger>
             <SelectValue placeholder="Select Location" />
@@ -156,7 +156,7 @@ export const JobFilters: React.FC<JobFiltersProps> = ({
       </div>
 
       <div className="space-y-4">
-        <h3 className="text-lg font-semibold">Job Skills</h3>
+        <h3 className="text-base md:text-lg font-semibold">Job Skills</h3>
         <div className="flex flex-wrap gap-2">
           {JOB_SKILLS.map((skill) => (
             <Toggle
@@ -167,7 +167,7 @@ export const JobFilters: React.FC<JobFiltersProps> = ({
                   pressed ? [...selectedSkills, skill] : selectedSkills.filter((s) => s !== skill)
                 );
               }}
-              className="capitalize"
+              className="capitalize text-xs md:text-sm"
             >
               {skill}
             </Toggle>
@@ -183,7 +183,7 @@ export const JobFilters: React.FC<JobFiltersProps> = ({
         {SALARY_RANGES.map((range) => (
           <div key={range.value} className="flex items-center space-x-2">
             <RadioGroupItem value={range.value} id={range.value} />
-            <label htmlFor={range.value} className="text-sm">
+            <label htmlFor={range.value} className="text-xs md:text-sm">
               {range.label}
             </label>
           </div>

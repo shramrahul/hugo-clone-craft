@@ -31,15 +31,15 @@ export const Testimonials = () => {
   console.log("Rendering testimonials with images:", testimonials.map(t => t.image));
   
   return (
-    <section className="py-16 bg-gray-50">
+    <section className="py-12 md:py-16 bg-gray-50">
       <div className="container mx-auto px-4">
-        <h2 className="text-3xl font-bold text-center mb-12">What Our Team Says</h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <h2 className="text-2xl md:text-3xl font-bold text-center mb-8 md:mb-12">What Our Team Says</h2>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
           {testimonials.map((testimonial) => {
             console.log("Rendering testimonial card with image:", testimonial.image);
             return (
               <div key={testimonial.id} className="bg-white rounded-lg shadow-sm border overflow-hidden animate-fade-up">
-                <div className="h-48 overflow-hidden">
+                <div className="h-40 md:h-48 overflow-hidden">
                   <img
                     src={testimonial.image}
                     alt="Work environment"
@@ -50,23 +50,23 @@ export const Testimonials = () => {
                     }}
                   />
                 </div>
-                <div className="p-6 text-center">
+                <div className="p-4 md:p-6 text-center">
                   <div className="flex items-center justify-center mb-4">
                     <img
                       src={testimonial.avatar}
                       alt={testimonial.name}
-                      className="w-12 h-12 rounded-full object-cover mr-4"
+                      className="w-10 h-10 md:w-12 md:h-12 rounded-full object-cover mr-3 md:mr-4"
                       onError={(e) => {
                         console.error("Error loading avatar:", testimonial.avatar);
                         e.currentTarget.src = "/placeholder.svg";
                       }}
                     />
                     <div>
-                      <h3 className="font-semibold">{testimonial.name}</h3>
-                      <p className="text-sm text-gray-600">{testimonial.role}</p>
+                      <h3 className="font-semibold text-sm md:text-base">{testimonial.name}</h3>
+                      <p className="text-xs md:text-sm text-gray-600">{testimonial.role}</p>
                     </div>
                   </div>
-                  <p className="text-gray-700">{testimonial.content}</p>
+                  <p className="text-sm md:text-base text-gray-700">{testimonial.content}</p>
                 </div>
               </div>
             );
