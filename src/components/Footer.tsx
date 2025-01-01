@@ -15,7 +15,7 @@ export const Footer = () => {
             <div className="flex flex-col sm:flex-row justify-between items-center space-y-4 sm:space-y-0">
               <p className="text-sm sm:text-base text-gray-600">© 2024 Avega Solutions. All rights reserved.</p>
               <div className="flex space-x-3 sm:space-x-4">
-                <a href="#" className="p-2 rounded-full bg-white hover:bg-gray-50 transition-colors">
+                <a href="https://www.linkedin.com/company/avega-solutions" target="_blank" rel="noopener noreferrer" className="p-2 rounded-full bg-white hover:bg-gray-50 transition-colors">
                   <Linkedin size={18} className="text-gray-600" />
                 </a>
                 <a href="#" className="p-2 rounded-full bg-white hover:bg-gray-50 transition-colors">
