@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { Navigation } from "@/components/Navigation";
 import { Footer } from "@/components/Footer";
 import { CareersHero } from "@/components/careers/CareersHero";
@@ -8,6 +8,16 @@ import { Testimonials } from "@/components/careers/Testimonials";
 import { EVerifyBadge } from "@/components/careers/EVerifyBadge";
 import { useJobFilters } from "@/hooks/useJobFilters";
 import { useFilteredJobs } from "@/hooks/useFilteredJobs";
+import {
+  LOCATIONS,
+  JOB_TYPES,
+  EXPERTISE_AREAS,
+  REMOTE_OPTIONS,
+  INDUSTRIES,
+  JOB_SKILLS,
+  DATE_POSTED_OPTIONS,
+  SALARY_RANGES
+} from "@/data/jobsData";
 
 const Careers = () => {
   console.log("Rendering Careers page");
