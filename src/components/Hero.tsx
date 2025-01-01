@@ -15,7 +15,7 @@ export const Hero = () => {
           </div>
           
           <h1 className="text-2xl md:text-3xl font-bold leading-tight tracking-wide whitespace-nowrap">
-            <span className="text-gray-700">Transforming Business with Technology Excellence</span>
+            <span className="text-gray-700">Empowering Your Digital Future</span>
           </h1>
           
           <p className="text-lg md:text-xl text-gray-600 leading-relaxed">
