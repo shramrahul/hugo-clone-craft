@@ -1,5 +1,5 @@
 import { GetStartedForm } from "./GetStartedForm";
-import { Linkedin, Twitter, Facebook, Youtube, Instagram } from "lucide-react";
+import { Linkedin, Twitter, Facebook, Youtube, Instagram, Mail, Phone } from "lucide-react";
 
 export const Footer = () => {
   return (
@@ -10,6 +10,16 @@ export const Footer = () => {
           <p className="text-base sm:text-lg text-gray-600 mb-8 sm:mb-12">
             We're always looking for new opportunities and collaborations
           </p>
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-8">
+            <a href="mailto:contact@avegasolutions.com" className="flex items-center gap-2 text-gray-600 hover:text-gray-900">
+              <Mail size={18} />
+              <span>contact@avegasolutions.com</span>
+            </a>
+            <a href="tel:+19294448547" className="flex items-center gap-2 text-gray-600 hover:text-gray-900">
+              <Phone size={18} />
+              <span>(929) 444-8547</span>
+            </a>
+          </div>
           <GetStartedForm />
           <div className="mt-12 sm:mt-16 pt-6 sm:pt-8 border-t border-gray-200">
             <div className="flex flex-col sm:flex-row justify-between items-center space-y-4 sm:space-y-0">
