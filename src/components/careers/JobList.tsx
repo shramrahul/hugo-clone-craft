@@ -1,26 +1,16 @@
 import React from "react";
 import { Briefcase, MapPin, Clock, DollarSign, Building } from "lucide-react";
 import { Button } from "@/components/ui/button";
-
-interface Job {
-  id: number;
-  title: string;
-  location: string;
-  type: string;
-  salary: number;
-  expertise: string;
-  remote: string;
-  industry: string;
-  skills: string[];
-  datePosted: string;
-  description: string;
-}
+import { Badge } from "@/components/ui/badge";
+import { Job } from "@/data/jobsData";
 
 interface JobListProps {
   jobs: Job[];
 }
 
 export const JobList: React.FC<JobListProps> = ({ jobs }) => {
+  console.log("Rendering JobList with", jobs.length, "jobs");
+  
   return (
     <div className="space-y-4 md:space-y-6">
       {jobs.length === 0 ? (
@@ -35,7 +25,12 @@ export const JobList: React.FC<JobListProps> = ({ jobs }) => {
           >
             <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-4">
               <div className="flex-1">
-                <h3 className="text-lg md:text-xl font-semibold mb-2">{job.title}</h3>
+                <div className="flex items-center justify-between mb-2">
+                  <h3 className="text-lg md:text-xl font-semibold">{job.title}</h3>
+                  <Badge variant={job.status === 'open' ? 'default' : 'secondary'}>
+                    {job.status === 'open' ? 'Open' : 'Closed'}
+                  </Badge>
+                </div>
                 <div className="flex flex-wrap items-center gap-2 md:gap-4 text-gray-600 mb-4 text-sm md:text-base">
                   <div className="flex items-center">
                     <MapPin className="w-4 h-4 mr-1" />
@@ -68,7 +63,13 @@ export const JobList: React.FC<JobListProps> = ({ jobs }) => {
               </div>
               <div className="flex md:flex-col items-center gap-4">
                 <Briefcase className="w-6 h-6 text-gray-400 hidden md:block" />
-                <Button variant="outline" className="w-full md:w-auto">Apply Now</Button>
+                <Button 
+                  variant="outline" 
+                  className="w-full md:w-auto"
+                  disabled={job.status === 'closed'}
+                >
+                  {job.status === 'open' ? 'Apply Now' : 'Position Filled'}
+                </Button>
               </div>
             </div>
           </div>
