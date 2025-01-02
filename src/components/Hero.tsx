@@ -14,7 +14,7 @@ export const Hero = () => {
             </span>
           </div>
           
-          <h1 className="text-xl sm:text-2xl md:text-3xl font-bold leading-tight tracking-wide">
+          <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold leading-tight tracking-wide">
             <span className="text-gray-700">Empowering Your Digital Future</span>
           </h1>
           

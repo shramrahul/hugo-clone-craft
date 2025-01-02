@@ -1,4 +1,4 @@
-import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
+import { Dialog, DialogContent, DialogDescription, DialogTrigger } from "@/components/ui/dialog";
 import { Button } from "@/components/ui/button";
 import { useState } from "react";
 import { toast } from "sonner";
@@ -16,7 +16,7 @@ export const GetStartedForm = () => {
 
   return (
     <Dialog open={open} onOpenChange={setOpen}>
-      <DialogTrigger asChild data-trigger="contact">
+      <DialogTrigger asChild>
         <Button className="bg-[#2563EB] text-white px-8 py-3 rounded-full hover:bg-[#1E40AF] transition-colors duration-300 shadow-lg hover:shadow-xl">
           Let's Connect
         </Button>
